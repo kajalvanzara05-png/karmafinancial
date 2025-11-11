@@ -1,0 +1,171 @@
+.footer {
+  background: #0A2342;
+  color: #fff;
+  padding: 20px 0 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.footer-section {
+  width: 250px;
+  margin: 10px;
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-size: 29px;
+  margin-bottom: 10px;
+  color: white;
+  position: relative;
+}
+
+.footer-section h3::after {
+
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #00c3ff;
+  border-radius: 10px;
+}
+.h4{
+  font-weight: 100;
+  width: 100%;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+.about-company p::highlight {
+  font-size:0ex;
+  line-height: 1.0;
+  color: #ccc;
+  margin-top: 10px;
+  font-weight: normal;
+  font-weight: 10;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #D4AF37;
+  transform: scale(1.1);
+}
+
+/* Office Info Icons */
+.office-info .icon {
+  color: #00c3ff;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  line-height: normal;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.7rem;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  color: white;
+}
+
+/* Brand Colors */
+
+.social-icons .instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: white;
+  
+  transform: scale(1.2);
+}
+
+.social-icons .youtube:hover {
+  background-color: #ff0000;
+   color: white;
+  transform: scale(1.2);
+
+}
+
+.social-icons .whatsapp:hover {
+  background-color: #25D366;
+   color: white;
+  transform: scale(1.2);
+
+}
+
+.footer-bottom {
+  border-top: 1px solid #f9f7f7;
+  margin-top: 30px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .footer-section {
+    text-align: center;
+  }
+}
+.tech{
+  color: #fd5949;
+  text-decoration: none;
+
+}
+.tech:hover{
+  color: #00c3ff
+}
+.footer-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+}

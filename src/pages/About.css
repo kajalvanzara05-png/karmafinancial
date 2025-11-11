@@ -1,0 +1,117 @@
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 20px;
+  color: #222;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* LEFT column (image + choose) */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-figure {
+  margin: 0;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(20,20,20,0.05);
+}
+
+.about-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Why Choose Us */
+.choose-section {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.choose-title {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  color: #12324b;
+}
+
+.choose-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.choose-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.choose-list .check {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  background: #e6fbf0;
+  color: #198754;
+  border-radius: 6px;
+  font-weight: 700;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+/* RIGHT column (text) */
+.about-right {
+  padding-top: 6px;
+}
+
+
+.about-heading {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  color: #0f3b4a;
+}
+
+.about-lead {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #2b2b2b;
+}
+
+.about-body {
+  margin: 0;
+  color: #324048;
+  line-height: 1.7;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .about-row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
+
+  .about-container {
+    padding: 32px 16px;
+  }
+}

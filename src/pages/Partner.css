@@ -1,0 +1,105 @@
+.logo-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 50px 0;
+  
+}
+
+.partners-logo-slider {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  gap: 40px;
+  align-items: center;
+}
+
+.partners-logo-slider img {
+  min-width: 150px;
+  height: 60px;
+  background-color: #f5f7f9
+  ;
+  object-fit: contain;
+}
+
+.logo-group {
+  display: flex;
+  gap: 40px;
+  margin-right: 200px; /* Space between groups of logos */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%); /* Full width of content including gap */
+  }
+}
+
+/* Optional: Pause animation on hover */
+.partners-logo-slider:hover {
+  animation-play-state: paused;
+}
+
+.partners-logo-slider img {
+  min-width: 180px;  /* Increased from 150px */
+  height: 100px;      /* Increased from 60px */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-group {
+  display: flex;
+  gap: 60px;        /* Increased from 40px for better spacing */
+  margin-right: 250px; /* Adjusted space between groups */
+}
+
+partners-logo-slider img:hover {
+  transform: scale(2.1);
+}
+
+.start-investment-btn {
+  background-color: rgb(79, 171, 78);
+  color: #f5f7f9;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.start-investment-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  background-color: rgb(249, 248, 250);
+  color: #13100e;
+}
+
+.angel_link{
+  color: #1a0232;
+  text-decoration: none;
+
+}
+.angel_link:hover{
+  color: #071414;
+ font-weight: bolder;
+}
+.partner-section {
+  width: 100%;
+  max-width: auto;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  background-color:#0A2342;
+  margin-top: 100px;
+  padding: 20px; 
+  border-radius: 8px;
+  height:400px;
+}
+.partner-section h1 {
+  color: #E6E8E6;
+  font-size: 50px;
+  margin-bottom: 15px;
+}

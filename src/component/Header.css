@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background:#0A2342;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.karma {
+  color: #4CAF50;
+}
+
+.sub {
+  color: #555;
+  font-weight: 600;
+  font-size: 14px;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #f3efef;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color:aqua;
+}

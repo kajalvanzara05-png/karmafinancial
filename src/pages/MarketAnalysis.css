@@ -1,0 +1,57 @@
+.market {
+  background-color: whitesmoke;
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.analysis-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analysis-figure {
+  margin: 0;
+  flex-shrink: 0;
+  width: 250px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(20,20,20,0.05);
+}
+
+.analysis-img {
+  display: block;
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
+.analysis-right {
+  text-align: left;
+  flex: 1;
+  margin:center;
+}
+
+.market .icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.market h3 {
+  color: #2e7d32;
+  font-size: 28px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+
+.market p {
+  color: #0b0b0b;
+  font-size: 23px;
+  margin: 0;
+  max-width: 600px;
+}
