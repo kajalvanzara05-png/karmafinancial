@@ -29,8 +29,43 @@ nav a {
   text-decoration: none;
   color: #f3efef;
   font-weight: 500;
+
 }
 
 nav a:hover {
-  color:aqua;
+  color:rgb(23, 180, 88);
 }
+  a {
+    position: relative;
+    color: #3aca43;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Arrow (::after) */
+  a::after {
+    content: ' ';
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  
+  a:hover {
+    color: #c9d7e5;
+    transform: translateY(-3px); 
+  }
+
+  a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left; 
+  }
+
+  a:hover::after {
+    transform: translateX(5px);
+  }
+
+  
