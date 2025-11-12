@@ -80,7 +80,12 @@ const Contact = () => {
           </button>
         </form>
       )}
+       
+   
+     
     </div>
+
+   
   );
 };
 

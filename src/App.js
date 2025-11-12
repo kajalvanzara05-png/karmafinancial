@@ -10,6 +10,9 @@ import Footer from "./component/Footer";
 import Partners from "./pages/Partner";
 import MarketAnalysis from "./pages/MarketAnalysis";
 import Service from "./pages/Service";
+import TestimonialSlider from "./pages/Testimonial_slider";
+import TestimonialForm from "./pages/Testimonial_form";
+
 function App() {
   return (
     <BrowserRouter>
@@ -28,19 +31,27 @@ function App() {
                       <About />       
                       <Partners />
                       <Contact/>
+                      <TestimonialSlider />
+                      
                 </>
               }
             />
-            <Route path="/About" element={<About />} />
+
+            <Route path="/About" element={<About />} /> 
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Service" element={<Service />} />
             <Route path="/Blogs" element={<Blog />} />
           </Routes>
+          <Routes>
+          <Route path="/Contact" element={<TestimonialForm />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+          
         </main>
 
     
       </div>
-      
+              
       <Footer/>
     </BrowserRouter>
   );

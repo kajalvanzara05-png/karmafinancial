@@ -1,0 +1,111 @@
+.testimonial-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.glow-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+  text-shadow: 0 0 8px #f4b400;
+}
+
+.testimonial-swiper .swiper-slide {
+  transition: transform 1s, filter 1s, opacity 1s;
+  filter: blur(3px) brightness(0.7);
+  transform: scale(0.9);
+  opacity: 0.6;
+}
+
+.testimonial-swiper .swiper-slide-active {
+  filter: blur(0) brightness(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.testimonial-swiper .swiper-slide:nth-child(1):only-child {
+  filter: blur(0) brightness(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.testimonial-card {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  min-height: 200px;
+}
+
+.feedback {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.company {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.menu-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.menu-icon {
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+.menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.menu-dropdown button {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
+
+.menu-dropdown button:hover {
+  background: #f1f1f1;
+}
+
+.message {
+  margin: 15px auto;
+  padding: 10px 15px;
+  background-color: #d4edda; /* green for success */
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  width: fit-content;
+  animation: fadeout 3s forwards;
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
