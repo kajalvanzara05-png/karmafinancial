@@ -115,3 +115,48 @@
     padding: 32px 16px;
   }
 }
+
+
+.headline{text-align:center;margin-bottom:36px}
+.eyebrow{font-size:18px;color:var(--accent);display:inline-block;margin-bottom:8px}
+p.lead{color:var(--muted);margin:8px 0 0}
+    /* CTA card */
+    .cta
+    {
+    background:var(--card);
+    background-color: #0d0808;
+    color:#fff;
+    padding:22px;
+    border-radius:8px;
+    box-shadow:0 8px 30px rgba(2,6,23,.35);
+    max-width:420px;
+    margin-top:18px
+
+  }
+  style{
+  margin-left:auto;
+  margin-top:32px;
+  }
+    .cta .title
+    {
+      display:flex;
+      justify-content: center;
+      gap:8px;font-weight:600
+    }
+    .cta p
+    {
+      margin:12px 0 18px;
+      color:white;
+    }
+    .btn
+    {
+      display:inline-block;
+      padding:10px 16px;
+      border:2px solid rgba(255,255,255,.15);
+      border-radius:8px;
+      color:#fff;
+      text-decoration:none;
+      background:transparent
+    }
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.cta{max-width:none}}
