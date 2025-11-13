@@ -1,103 +1,98 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper/modules";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import { FaStar, FaEllipsisV } from "react-icons/fa";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import "./Testimonial_slider.css";
 
 const Testimonial_slider = () => {
-  const [reviews, setReviews] = useState([]);
-  const [openMenu, setOpenMenu] = useState(null);
+  const [reviews, setReviews] = useState(() => {
+    const saved = localStorage.getItem("reviews");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  const [menuOpen, setMenuOpen] = useState(null);
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const savedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
-    setReviews(savedReviews);
-  }, []);
-
-  const toggleMenu = (index) => {
-    setOpenMenu(openMenu === index ? null : index);
-  };
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+  }, [reviews]);
 
   const handleDelete = (id) => {
-    const updated = reviews.filter((r) => r.id !== id);
-    setReviews(updated);
-    localStorage.setItem("reviews", JSON.stringify(updated));
-    setOpenMenu(null);
-    showMessage("Review deleted!");
-  };
-
-  const handleEdit = (review) => {
-    const newFeedback = prompt("Edit review:", review.feedback);
-    if (newFeedback && newFeedback.trim() !== "") {
-      const updated = reviews.map((r) =>
-        r.id === review.id ? { ...r, feedback: newFeedback } : r
-      );
+    if (window.confirm("Are you sure you want to delete this review?")) {
+      const updated = reviews.filter((r) => r.id !== id);
       setReviews(updated);
       localStorage.setItem("reviews", JSON.stringify(updated));
-      setOpenMenu(null);
-      showMessage("Review edited!");
+      setMenuOpen(null);
+      setMessage("✅ Review deleted successfully");
+      setTimeout(() => setMessage(""), 3000);
     }
   };
 
-  const showMessage = (msg) => {
-    setMessage(msg);
+  const handleEdit = (review) => {
+    localStorage.setItem("editReviewId", review.id);
+    setMessage("✏ You can edit this review in Contact page");
     setTimeout(() => setMessage(""), 3000);
+    navigate("/contact");
   };
 
   return (
-    <div className="testimonial-container">
-      {message && <div className="message-toast">{message}</div>}
+    <div className="testimonial-section">
+      <h2 className="glow-title">✨ What Our Clients Say ✨</h2>
+
+      {message && <div className="message">{message}</div>}
 
       <Swiper
-  modules={[Pagination, Autoplay]}
-  pagination={{ clickable: true }}
-  slidesPerView={3}
-  spaceBetween={20}
-  loop={true}
-  centeredSlides={true}
-  autoplay={{ delay: 4000 }}
-  className="testimonial-swiper"
->
-  {reviews.map((review, index) => (
-    <SwiperSlide key={review.id}>
-      {({ isActive, isPrev }) => (   // check previous slide
-        <div
-          className={`testimonial-card ${
-            isActive ? "active-card" : isPrev ? "left-blur-card" : "right-blur-card"
-          }`}
-        >
-          <p className="feedback">“{review.feedback}”</p>
-          <h3>{review.name}</h3>
-          <p className="company">{review.company}</p>
-          <div className="rating">
-            {[...Array(review.rating)].map((_, i) => (
-              <FaStar key={i} color="#f4b400" />
-            ))}
-          </div>
+        effect={reviews.length > 1 ? "coverflow" : undefined}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={3}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        loop={reviews.length > 1}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        pagination={{ clickable: true }}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        className="testimonial-swiper"
+      >
+        {reviews.map((item) => (
+          <SwiperSlide key={item.id}>
+            <div className="testimonial-card glow-card">
+              <p className="feedback">“{item.feedback}”</p>
+              <h3>{item.name}</h3>
+              <p className="company">{item.company}</p>
+              <div className="rating">
+                {[...Array(item.rating)].map((_, i) => (
+                  <FaStar key={i} color="#f4b400" />
+                ))}
+              </div>
 
-          {isActive && (
-            <div className="menu-container">
-              <FaEllipsisV
-                className="menu-icon"
-                onClick={() => toggleMenu(index)}
-              />
-              {openMenu === index && (
-                <div className="menu-dropdown">
-                  <button onClick={() => handleEdit(review)}>Edit</button>
-                  <button onClick={() => handleDelete(review.id)}>Delete</button>
-                </div>
-              )}
+              {/* 3-dot Menu */}
+              <div className="menu-container" onClick={(e) => e.stopPropagation()}>
+                <FaEllipsisV
+                  className="menu-icon"
+                  onClick={() => setMenuOpen(menuOpen === item.id ? null : item.id)}
+                />
+                {menuOpen === item.id && (
+                  <div className="menu-dropdown">
+                    <button onClick={() => handleEdit(item)}>Edit</button>
+                    <button onClick={() => handleDelete(item.id)}>Delete</button>
+                  </div>
+                )}
+              </div>
             </div>
-          )}
-        </div>
-      )}
-    </SwiperSlide>
-  ))}
-</Swiper>
-
-
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

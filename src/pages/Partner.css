@@ -1,9 +1,15 @@
 .logo-slider-container {
-  width: 100%;
+  max-width: 1500px;
   overflow: hidden;
   position: relative;
-  padding: 50px 0;
-  
+  padding: 40px 20;
+  background-color: #f3f4f6;
+  border-radius: 3px;
+  margin:  auto;  
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  content: normal;
+  text-align: center;
 }
 
 .partners-logo-slider {
@@ -16,8 +22,7 @@
 .partners-logo-slider img {
   min-width: 150px;
   height: 60px;
-  background-color: #f5f7f9
-  ;
+  background-color: #f5f7f9;
   object-fit: contain;
 }
 
@@ -59,36 +64,30 @@ partners-logo-slider img:hover {
 }
 
 .start-investment-btn {
-  background-color: rgb(79, 171, 78);
-  color: #f5f7f9;
+  background-color:#0A2342;
+  color: #27046d;
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
-  border: none;
+  border:groove;
+  border-color:#FFFFFF;
   border-radius: 8px; 
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .start-investment-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(249, 248, 248, 0.2);
   text-decoration: none;
-  background-color: rgb(249, 248, 250);
-  color: #13100e;
+  background-color:white;
+  color:#0A2342;
 }
 
-.angel_link{
-  color: #1a0232;
-  text-decoration: none;
 
-}
-.angel_link:hover{
-  color: #071414;
- font-weight: bolder;
-}
 .partner-section {
   width: 100%;
-  max-width: auto;
+  width: auto;
   margin: auto;
   overflow: hidden;
   text-align: center;
@@ -96,10 +95,28 @@ partners-logo-slider img:hover {
   margin-top: 100px;
   padding: 20px; 
   border-radius: 8px;
-  height:400px;
+  height:600px;
 }
 .partner-section h1 {
-  color: #E6E8E6;
+  color: #2b8745;
   font-size: 50px;
   margin-bottom: 15px;
+  
 }
+.title{
+  color: #E6E8E6;
+  font-size: 20px;
+  font-weight:normal;
+  margin-bottom: 10px;
+}
+
+.start-investment-btn{
+  margin-top:20px;
+}
+.partners-logos{
+ box-sizing: content-box;
+ background-color: #f5f7f9;
+
+}
+
+ 

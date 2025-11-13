@@ -163,3 +163,9 @@
   filter: blur(2px) brightness(0.8);
   pointer-events: none;
 }
+.inactive-card {
+  transform: scale(0.8);
+  opacity: 0.4;
+  filter: blur(4px) brightness(0.6);
+  pointer-events: none;
+}
