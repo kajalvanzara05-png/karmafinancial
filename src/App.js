@@ -28,8 +28,8 @@ function App() {
                       <Home />
                       <Services/>
                       <MarketAnalysis />
+                       <Partners />
                       <About />       
-                      <Partners />
                       <Contact/>
                       <TestimonialSlider />
                       
