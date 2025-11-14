@@ -52,7 +52,7 @@ const About = () => {
           >
             <figure className="about-figure">
               <img
-                src="/images/about.jpg"
+                src="/images/about.png"
                 alt="About Us"
                 className="about-img"
               />
