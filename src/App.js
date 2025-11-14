@@ -12,6 +12,7 @@ import MarketAnalysis from "./pages/MarketAnalysis";
 import Service from "./pages/Service";
 import TestimonialSlider from "./pages/Testimonial_slider";
 import TestimonialForm from "./pages/Testimonial_form";
+import ServiceDetails from "./pages/ServiceDetails";
 
 function App() {
   return (
@@ -46,6 +47,28 @@ function App() {
           <Route path="/Contact" element={<TestimonialForm />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
+          <Routes>
+            <Route path="/services/:id" element={<ServiceDetails />} />
+          </Routes>
+          <Routes>
+  <Route
+    path="/"
+    element={
+      <>
+        <Home />
+        <MarketAnalysis />
+        <Partners />
+        <About />
+        <Contact />
+        <TestimonialSlider />
+      </>
+    }
+  />
+
+  <Route path="/services" element={<Services />} />
+  <Route path="/service/:id" element={<Services />} />
+</Routes>
+
           
         </main>
 
