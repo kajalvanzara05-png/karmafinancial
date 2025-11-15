@@ -1,54 +1,138 @@
-icon thoda card ni andar aetle ke aardg cut joi ae chhe                                                    .services {
+.services {
   text-align: center;
-  padding: 70px 20px;
-  background-color:whitesmoke
+  padding: 50px 20px;
+  background-color: whitesmoke;
 }
-
-.services h3 {
-  color: #2e7d32;
-  font-size: 26px;
-  margin-bottom: 40px;
-}
-
 
 .finance-title {
-   font-size: 40px; 
-   font-weight: 700;
-    text-align: center; 
-    background: #5A0EA5;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
-    width: fit-content;
-    margin: 0 auto 40px; }
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
-  max-width: 900px;
-  margin: 0 auto;
+  font-size: 36px; 
+  font-weight: 700;
+  text-align: center; 
+  background: #5A0EA5;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  width: fit-content;
+  margin: 0 auto 40px;
 }
 
+/* GRID */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;  /* Proper space between cards */
+  max-width: 1000px;
+  margin: 0 auto;
+  place-items: center;
+}
+
+/* CARD */
 .service-card {
-  background: #fafafa;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  text-align: center;
+  padding: 15px;
+  width: 150px;    /* Small square */
+  height: 150px;   /* Small square */
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
+/* ICON */
 .service-card .icon {
-  font-size: 40px;
-  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 8px;
 }
 
+/* TITLE */
 .service-card h4 {
   color: #333;
   font-weight: 500;
+  font-size: 14px;
+  margin: 0;
 }
+
+/* DESCRIPTION */
+.service-card p {
+  font-size: 12px;
+  color: #555;
+  margin-top: 4px;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .service-card {
+    width: 140px;
+    height: 140px;
+    padding: 12px;
+  }
+
+  .service-card .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .service-card h4 {
+    font-size: 13px;
+  }
+
+  .service-card p {
+    font-size: 11px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .service-card {
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+  }
+
+  .service-card .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .service-card h4 {
+    font-size: 12px;
+  }
+
+  .service-card p {
+    font-size: 10px;
+  }
+}
+

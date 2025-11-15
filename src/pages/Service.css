@@ -1,100 +1,79 @@
+.finance-wrapper {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.finance-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.finance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
 .finance-card {
-  display: flex;
-  flex-direction: column;   /* 👉 Icon upar, content niche */
-  align-items: center;
+  width: 100%;
+  max-width: 360px;
   cursor: pointer;
-  transition: 0.3s;
-  gap: 15px;                /* Space between icon & text box */
+  transition: transform 0.3s;
 }
 
 .finance-card:hover {
   transform: translateY(-4px);
 }
 
-/* ICON CIRCLE */
+.finance-body {
+  background: white;
+  width: 100%;
+  min-height: 180px;
+  border-radius: 25px;
+  border: 2px solid #e6e6e6;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical center */
+  align-items: center;     /* Horizontal center */
+  padding: 20px;
+}
+
 .finance-icon {
-  width: 95px;
-  height: 95px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  color: white;
-  font-size: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 15px;
 }
 
-/* Remove puzzle cut shape */
-.finance-icon::after {
-  display: none;
-}
-
-/* LONG WHITE CARD (CENTERED) */
-.finance-body {
-  background: white;
-  padding: 25px 35px;
-  border-radius: 25px;
-  width: 100%;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.12);
-  min-height: 95px;
-  display: flex;
-  justify-content: center;
+.finance-content {
   text-align: center;
 }
 
 .finance-text {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: #222;
-}
-.finance-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* 👉 3 column fix */
-  gap: 25px;
-}
-.finance-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 45px 45px;     /* 👉 Row & column vache both side large spacing */
-  max-width: 1250px;
-  margin: 0 auto;
-  place-items: center;  /* 👉 Cards center & spacing visible */
+  margin: 0;
 }
 
-
-.finance-card {
-  width: 100%;
-  max-width: 360px;     /* All cards SAME width */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
+.finance-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 6px;
+  line-height: 1.4;
 }
 
-
-
-.finance-body {
-  background: white;
-  padding: 20px 25px;
-  border-radius: 25px;
-  width: 100%;
-  min-height: 120px;          /* All cards SAME height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  border: 2px solid #e6e6e6;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-}
-
-
-/* ===========================
-    RESPONSIVE BREAKPOINTS
-   =========================== */
-
-/* TABLET – 2 COLUMNS */
+/* RESPONSIVE */
 @media (max-width: 992px) {
   .finance-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -102,7 +81,6 @@
   }
 }
 
-/* MOBILE – 1 COLUMN */
 @media (max-width: 600px) {
   .finance-grid {
     grid-template-columns: 1fr;
@@ -114,6 +92,6 @@
   }
 
   .finance-body {
-    min-height: 100px;
+    min-height: 160px;
   }
 }
