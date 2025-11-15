@@ -1,0 +1,105 @@
+/* ---------- MAIN CONTAINER ---------- */
+
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+  background: #eee;
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+  background: #ddd;
+}
+
+/* ---------- TITLE ---------- */
+.details-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0a3d62;
+}
+
+/* ---------- INTRO PARAGRAPH ---------- */
+.details-intro {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* ---------- SECTIONS ---------- */
+.details-section {
+  margin: 28px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.details-section h2 {
+    text-align: left;
+  font-size: 24px;
+  color: #0c2461;
+  margin-bottom: 12px;
+}
+
+/* ---------- LISTS ---------- */
+.details-section ul {
+  padding-left: 22px;
+  ;
+}
+
+.details-section ul li {
+  margin: 6px 0;
+  text-align: left;
+  font-size: 17px;
+  color: #444;
+}
+
+/* ---------- CONTACT BUTTON ---------- */
+.contact-btn {
+  margin-top: 20px;
+  background: #0c2461;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.contact-btn:hover {
+  background: #1e3799;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  .details-container {
+    padding: 15px;
+  }
+
+  .details-title {
+    font-size: 26px;
+  }
+
+  .details-section h2 {
+    font-size: 20px;
+  }
+
+  .details-intro,
+  .details-section ul li {
+    font-size: 16px;
+  }
+}
+.details-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+  color: #222;
+}
