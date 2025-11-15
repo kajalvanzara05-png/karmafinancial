@@ -1,3 +1,4 @@
+/* 🌟 MARKET SECTION 🌟 */
 .market {
   background-color: whitesmoke;
   padding: 70px 20px;
@@ -6,6 +7,7 @@
   align-items: center;
 }
 
+/* Layout */
 .analysis-left {
   display: flex;
   align-items: flex-start;
@@ -14,27 +16,29 @@
   margin: 0 auto;
 }
 
+/* Image box */
 .analysis-figure {
   margin: 0;
   flex-shrink: 0;
-  width: 250px;
+  width: 260px;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(20,20,20,0.05);
+  box-shadow: 0 6px 20px rgba(20,20,20,0.06);
 }
 
+/* Image */
 .analysis-img {
   display: block;
-  width: 250px;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
+/* Right section text */
 .analysis-right {
   text-align: left;
   flex: 1;
-  margin:center;
 }
 
 .market .icon {
@@ -45,13 +49,59 @@
 .market h3 {
   color: #2e7d32;
   font-size: 28px;
-  font-weight: bolder;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
 .market p {
   color: #0b0b0b;
-  font-size: 23px;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 650px;
   margin: 0;
-  max-width: 600px;
+}
+
+/* 📱 RESPONSIVE DESIGN — Mobile / iPhone */
+@media (max-width: 768px) {
+  .market {
+    padding: 50px 15px;
+  }
+
+  .analysis-left {
+    flex-direction: column;   /* COLUMN layout on mobile */
+    text-align: center;
+    gap: 25px;
+  }
+
+  .analysis-figure {
+    width: 100%;             /* Full width image */
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .market h3 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .market p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+}
+
+/* 📱 Extra Small Phones (iPhone SE, 5.5" devices) */
+@media (max-width: 480px) {
+
+  .analysis-figure {
+    max-width: 300px;
+  }
+
+  .market h3 {
+    font-size: 22px;
+  }
+
+  .market p {
+    font-size: 17px;
+  }
 }

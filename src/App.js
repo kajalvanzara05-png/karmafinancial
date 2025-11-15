@@ -51,23 +51,7 @@ function App() {
             <Route path="/services/:id" element={<ServiceDetails />} />
           </Routes>
           <Routes>
-  <Route
-    path="/"
-    element={
-      <>
-        <Home />
-        <MarketAnalysis />
-        <Partners />
-        <About />
-        <Contact />
-        <TestimonialSlider />
-      </>
-    }
-  />
-
-  <Route path="/services" element={<Services />} />
-  <Route path="/service/:id" element={<Services />} />
-</Routes>
+        </Routes>
 
           
         </main>

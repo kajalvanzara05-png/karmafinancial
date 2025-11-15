@@ -4,9 +4,9 @@
     url("https://images.unsplash.com/photo-1561414927-6d86591d0c4f?auto=format&fit=crop&w=2000&q=80")
     center/cover no-repeat;
   color: #fff;
-  padding: 80px 8%;
+  padding: 80px 5%; /* Use percentage for flexible sides */
   font-family: "Poppins", sans-serif;
-  
+  box-sizing: border-box;
 }
 
 .headline {
@@ -43,13 +43,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 50px;
+  justify-content: center; /* center all content */
+  gap: 40px; /* reduced gap for smaller screens */
 }
 
 .about-left, .about-right {
-  flex: 1;
-  min-width: 320px;
+  flex: 1 1 400px; /* min width 400px, grow */
+  max-width: 600px; /* do not exceed 600px */
 }
 
 .about-left {
@@ -60,11 +60,10 @@
 
 .about-img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(202, 199, 199, 0.5);
-  transition: transform 0.4s ease;
   height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease;
 }
 
 .about-img:hover {
@@ -76,7 +75,6 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
-  
 }
 
 .about-lead {
@@ -88,7 +86,6 @@
   font-size: 1.1rem;
   line-height: 1.7;
   color: #ccc;
-
 }
 
 .choose-section {
@@ -97,13 +94,13 @@
   border-radius: 15px;
   padding: 20px 25px;
   box-shadow: 0 0 25px rgba(255,255,255,0.05);
+  width: 100%;
 }
 
 .choose-title {
   font-size: 1.5rem;
   color: #ffd166;
   margin-bottom: 10px;
-  margin: auto;
 }
 
 .choose-list {
@@ -112,6 +109,7 @@
 }
 
 .choose-list li {
+  text-align: left;
   margin-bottom: 8px;
   font-size: 1.05rem;
 }
@@ -134,7 +132,7 @@
 .btn {
   margin-top: 10px;
   padding: 12px 30px;
-  background: linear-gradient(128deg, #070141, #817fd4);
+  background: linear-gradient(135deg, #06d6a0, #118ab2);
   color: white;
   border: none;
   border-radius: 30px;
@@ -145,22 +143,64 @@
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(27, 48, 43, 0.6);
+  box-shadow: 0 0 20px rgba(6,214,160,0.6);
 }
 
-/* 📱 Responsive Design */
-@media (max-width: 992px) {
+/* ----------------- RESPONSIVE ----------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
   .about-row {
     flex-direction: column;
     text-align: center;
   }
   .about-left, .about-right {
     width: 100%;
-  }
-  .about-img {
-    margin: 0 auto;
+    max-width: 500px;
   }
   .about-heading {
     font-size: 2.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 60px 5%;
+  }
+  .about-heading {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1.1rem;
+  }
+  .about-body {
+    font-size: 1rem;
+  }
+  .about-img {
+    max-width: 90%;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 40px 3%;
+  }
+  .about-heading {
+    font-size: 1.8rem;
+  }
+  .lead, .about-body {
+    font-size: 0.95rem;
+  }
+  .choose-title {
+    font-size: 1.3rem;
+  }
+  .choose-list li {
+    font-size: 0.95rem;
+  }
+  .btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
   }
 }
