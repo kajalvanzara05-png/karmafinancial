@@ -52,15 +52,16 @@
 
 /* Button */
 .contact-button {
-  padding: 12px;
+  padding: 12px 25px;
   border-radius: 8px;
   border: none;
   background-color: #265814;
   color: white;
   font-size: 16px;
-  width:max-content;
   cursor: pointer;
-  margin-left: 250px;
+  display: block;          /* Center button */
+  margin: 20px auto 0;     /* Top spacing, auto left/right */
+  width: fit-content;      /* Width based on content */
   transition: background 0.3s ease;
 }
 

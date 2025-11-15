@@ -141,31 +141,71 @@
   transition: all 0.5s ease;
 }
 
-/* Center slide */
+/* Center slide - no blur */
 .active-card {
   transform: scale(1);
   opacity: 1;
-  filter: none;
+  filter: none;           /* fully visible */
   pointer-events: auto;
+  z-index: 5;
 }
 
 /* Left slide blur */
 .left-blur-card {
   transform: scale(0.9);
   opacity: 0.6;
-  filter: blur(2px) brightness(0.8);
+  filter: blur(3px) brightness(0.7); /* blur + dark */
   pointer-events: none;
+  z-index: 1;
 }
 
+/* Right slide blur */
 .right-blur-card {
   transform: scale(0.9);
   opacity: 0.6;
-  filter: blur(2px) brightness(0.8);
+  filter: blur(3px) brightness(0.7); /* blur + dark */
   pointer-events: none;
+  z-index: 1;
 }
+
+/* Extra slides - more blur */
 .inactive-card {
   transform: scale(0.8);
   opacity: 0.4;
-  filter: blur(4px) brightness(0.6);
+  filter: blur(5px) brightness(0.5);
   pointer-events: none;
+  z-index: 0;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .testimonial-card {
+    width: 240px;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 200px;
+    padding: 15px;
+  }
+  .testimonial-swiper {
+    slides-per-view: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    width: 160px;
+    padding: 12px;
+  }
+  .testimonial-swiper {
+    slides-per-view: 1;
+  }
+  .menu-container {
+    top: 5px;
+    right: 5px;
+  }
 }
