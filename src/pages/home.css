@@ -1,39 +1,60 @@
 .home {
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+    linear-gradient(rgba(0, 0, 50, 0.55), rgba(0, 0, 50, 0.65)),
     url("https://images.unsplash.com/photo-1542144950-b68de6e03b57?fm=jpg&q=80&w=2000")
     center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 140px 20px;
   font-family: "Poppins", sans-serif;
-  animation: fadeIn 1.5s ease-in-out;
-  background-attachment: fixed;
   position: relative;
   overflow: hidden;
 }
 
-/* Floating soft overlay effect */
 .home::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 50, 0.3);
   z-index: 1;
 }
 
-/* Text content styling */
+/* Heading */
 .home h2 {
   position: relative;
   z-index: 2;
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: 1px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+  display: inline-block;
+}
+
+/* Letters */
+.rs-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(105%) rotateY(45deg) rotateZ(90deg);
+}
+
+/* Letter animation */
+@keyframes rsFadeIn {
+  0% { opacity: 0; transform: translateX(105%) rotateY(45deg) rotateZ(90deg); }
+  50% { opacity: 1; transform: translateX(0) rotateY(0) rotateZ(0); }
+  100% { opacity: 1; transform: translateX(0) rotateY(0) rotateZ(0); }
+}
+
+/* Paragraph & button */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .home p {
@@ -41,12 +62,11 @@
   z-index: 2;
   font-size: 1.3rem;
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 20px auto 30px;
   line-height: 1.6;
   color: #e0e0e0;
 }
 
-/* Button */
 .home button {
   position: relative;
   z-index: 2;
@@ -58,7 +78,7 @@
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .home button:hover {
@@ -66,72 +86,7 @@
   transform: scale(1.07);
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-
-/* 🌐 Responsive for Tablets */
-@media (max-width: 1024px) {
-  .home {
-    padding: 120px 20px;
-    background-attachment: scroll; /* iPhone ma FIXED background work nathi karto */
-  }
-
-  .home h2 {
-    font-size: 2.6rem;
-  }
-
-  .home p {
-    font-size: 1.15rem;
-    max-width: 85%;
-  }
-}
-
-/* 🌐 Responsive for Mobile (600px and below) */
-@media (max-width: 600px) {
-  .home {
-    padding: 110px 15px;
-    background-position: center;
-    background-size: cover;
-    background-attachment: scroll; 
-  }
-
-  .home h2 {
-    font-size: 1.9rem;
-    line-height: 2.4rem;
-  }
-
-  .home p {
-    font-size: 1rem;
-    max-width: 95%;
-    margin-bottom: 25px;
-  }
-
-  .home button {
-    padding: 12px 28px;
-    font-size: 1rem;
-  }
-}
-
-/* 🌐 Extra Small Devices (iPhone SE, small android) */
-@media (max-width: 400px) {
-  .home {
-    padding: 100px 10px;
-  }
-
-  .home h2 {
-    font-size: 1.6rem;
-  }
-
-  .home p {
-    font-size: 0.95rem;
-  }
-
-  .home button {
-    padding: 10px 24px;
-    font-size: 0.9rem;
-  }
-}
+/* Responsive */
+@media (max-width: 1024px) { .home h2 { font-size: 2.6rem; } .home p { font-size: 1.15rem; } }
+@media (max-width: 600px) { .home h2 { font-size: 1.9rem; } .home p { font-size: 1rem; } .home button { padding: 12px 28px; font-size: 1rem; } }
+@media (max-width: 400px) { .home h2 { font-size: 1.6rem; } .home p { font-size: 0.95rem; } .home button { padding: 10px 24px; font-size: 0.9rem; } }
