@@ -1,141 +1,31 @@
-/* ===================== MAIN CONTAINER ===================== */
-.logo-slider-container {
-  max-width: 1400px;
-  overflow: hidden;
-  padding: 40px 20px;
-  background-color: #E9F0F6;   /* Light blue-grey (premium look) */
-  border-radius: 10px;
-  margin: 80px auto;
-  width: 90%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: center;
+.partner-slider-wrapper {
+  overflow: hidden; /* Slider ne container mathi bahar na javani */
+  position: relative;
+  margin: 0 auto;
 }
 
-/* ===================== SCROLLER ===================== */
-.partners-logo-slider {
+.partner-slider {
   display: flex;
-  gap: 40px; /* Reduced gap for smaller screens */
-  align-items: center;
-  animation: scroll 20s linear infinite;
-  white-space: nowrap;
+  gap: 2rem; /* Logo vachche space */
+  animation: scroll 20s linear infinite; /* Continuous scrolling effect */
 }
 
-/* Pause on hover */
-.partners-logo-slider:hover {
-  animation-play-state: paused;
-}
-
-/* ===================== LOGO IMAGES ===================== */
-.partners-logo-slider img {
-  min-width: 160px;  /* Adjusted for smaller screens */
-  height: 90px;
+.partner-slider img {
+  max-height: 80px; /* Logos ni height limit */
   object-fit: contain;
-  background-color: #F7F9FB;
-  border-radius: 6px;
-  padding: 10px;
-  transition: transform 0.3s ease;
 }
 
-.partners-logo-slider img:hover {
-  transform: scale(1.3);
+.small-logo {
+  max-height: 60px; /* Chhota logos */
 }
 
-/* ===================== GROUP WRAPPER ===================== */
-.logo-group {
-  display: flex;
-  gap: 40px;
-}
-
-/* ===================== SMOOTH ANIMATION ===================== */
+/* Slider scroll animation */
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-50%); /* Logos duplicate thava thi continuous scroll */
   }
 }
 
-/* ===================== PARTNER SECTION ===================== */
-.partner-section {
-  width: 100%;
-  margin-top: 80px;
-  text-align: center;
-  background-color: #0A2342; 
-  padding: 50px 0.5px;
-  border-radius: 12px;
-}
-
-.partner-section h1 {
-  color: #31C48D;  /* Finance green */
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.title {
-  color: #D8E2EB;
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-/* ===================== BUTTON ===================== */
-.start-investment-btn {
-  background-color: #31C48D;
-  color: #0A2342;
-  padding: 1rem 2.5rem;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.start-investment-btn:hover {
-  transform: translateY(-3px);
-  background-color: white;
-}
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 1024px) {
-  .partners-logo-slider {
-    gap: 30px;
-  }
-  .partners-logo-slider img {
-    min-width: 140px;
-    height: 80px;
-  }
-  .partner-section h1 {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .partners-logo-slider {
-    gap: 25px;
-  }
-  .partners-logo-slider img {
-    min-width: 120px;
-    height: 70px;
-  }
-  .partner-section h1 {
-    font-size: 34px;
-  }
-}
-
-@media (max-width: 480px) {
-  .partners-logo-slider {
-    gap: 15px;
-  }
-  .partners-logo-slider img {
-    min-width: 100px;
-    height: 55px;
-  }
-  .partner-section h1 {
-    font-size: 26px;
-  }
-  .start-investment-btn {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-  }
-}

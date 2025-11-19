@@ -3,57 +3,58 @@ import POLICY_BAZAAR from '../assets/policy_bazaar.png';
 import ANGEL_ONE from '../assets/angel_one.png';
 import IIFL from "../assets/iifl.jpeg";
 import './Partner.css';
-
+import { motion } from 'framer-motion';
 
 const Partners = () => {
+  const logos = [TATA_AIA, POLICY_BAZAAR, ANGEL_ONE, IIFL];
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
   return (
+    <motion.div
+      className="container py-5 text-center"
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.3 }}
+    >
+      <h1 className="mb-3">🤝 Join the Karma Financial Network 🤝</h1>
+      <p className="lead">Be part of a growing legacy of financial empowerment.</p>
+      <p className="lead mb-4">
+        Start your journey with Karma Financial and help others grow their wealth confidently.
+      </p>
 
-    
-    <div className="partner-section">
-      
-      <div className="trusted-partners">
-        <h1>🤝 Join the Karma Financial Network 🤝</h1>
-        
-     <p className='title'>  Be part of a growing legacy of financial empowerment.</p>
-     <p className='title'>Start your journey with Karma Financial and help others grow their wealth confidently.</p>
-     <div >
-      
-     
+      <h2 className="mb-4">Our Trusted Partners</h2>
 
-        <div className="logo-slider-container">
-          <h1 className='partner'>Our Trusted Partners</h1>
-          <div className="partners-logo-slider">
-            <div className="logo-group">
-              <img src={TATA_AIA} alt="Tata AIA" />
-              <img src={POLICY_BAZAAR} alt="Policy Bazaar" />
-              <img src={ANGEL_ONE} alt="Angel One" />
-              <img src={IIFL} alt="IIFL Finance" />
-            </div>
-            <div className="logo-group">
-              <img src={TATA_AIA} alt="Tata AIA" />
-              <img src={POLICY_BAZAAR} alt="Policy Bazaar" />
-              <img src={ANGEL_ONE} alt="Angel One" />
-              <img src={IIFL} alt="IIFL Finance" />
-            </div>
-            <div className="logo-group">
-              <img src={TATA_AIA} alt="Tata AIA" />
-              <img src={POLICY_BAZAAR} alt="Policy Bazaar" />
-              <img src={ANGEL_ONE} alt="Angel One" />
-              <img src={IIFL} alt="IIFL Finance" />
-            </div>
-            
-          </div>
-          
+      {/* Slider */}
+      <div className="partner-slider-wrapper overflow-hidden">
+        <div className="partner-slider d-flex align-items-center">
+          {logos.concat(logos).map((logo, idx) => (
+            <img
+              key={idx}
+              src={logo}
+              alt="Partner Logo"
+              className={`img-fluid rounded shadow mx-3 ${
+                idx % logos.length === 1 || idx % logos.length === 2 ? "small-logo" : ""
+              }`}
+            />
+          ))}
         </div>
-        
       </div>
-      
-      </div>
-      <button className="start-investment-btn"> 
-        <a href="https://a.aonelink.in/ANGOne/OVAk2Su" target="_blank"  rel="noopener noreferrer"
-         >📩 Start Investment</a>
-         </button>
-    </div>
+
+      <a
+        href="https://a.aonelink.in/ANGOne/OVAk2Su"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn btn-primary btn-lg mt-4"
+      >
+        📩 Start Investment
+      </a>
+    </motion.div>
   );
 };
+
 export default Partners;
