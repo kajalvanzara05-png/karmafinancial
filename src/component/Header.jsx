@@ -13,21 +13,16 @@ export default function Header() {
   return (
     <header className="header transparent-header">
       <nav className="navbar navbar-expand-lg py-1">
-
-        {/* Top area */}
         <div className="container d-flex align-items-center justify-content-between">
-
-          {/* Logo */}
           <Link to="/" onClick={() => reloadPage("/")}>
             <img
               src={logo}
               alt="Karma Financial Solutions Logo"
               className="navbar-brand"
-              style={{ height: "48px" }}  /* smaller logo */
+              style={{ height: "48px" }}
             />
           </Link>
 
-          {/* Toggle button */}
           <button
             className="navbar-toggler"
             type="button"
@@ -37,33 +32,42 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* RIGHT SIDE MENU */}
         <div className={`mobile-collapse ${isOpen ? "show" : ""}`}>
           <div className="container">
-            <ul className="navbar-nav gap-lg-3 text-center py-3">
+            <ul className="navbar-nav gap-lg-3 text-start py-3">
               <li className="nav-item">
-                <Link className="nav-link" to="/" onClick={() => reloadPage("/")}>Home</Link>
+                <Link className="nav-link" to="/" onClick={() => reloadPage("/")}>
+                  Home
+                </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/About" onClick={() => reloadPage("/About")}>About</Link>
+                <Link className="nav-link" to="/About" onClick={() => reloadPage("/About")}>
+                  About
+                </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/Service" onClick={() => reloadPage("/Service")}>Service</Link>
+                <Link className="nav-link" to="/Service" onClick={() => reloadPage("/Service")}>
+                  Service
+                </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/Contact" onClick={() => reloadPage("/Contact")}>Contact</Link>
+                <Link className="nav-link" to="/Contact" onClick={() => reloadPage("/Contact")}>
+                  Contact
+                </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/Blogs" onClick={() => reloadPage("/Blogs")}>Blog</Link>
+                <Link className="nav-link" to="/Blogs" onClick={() => reloadPage("/Blogs")}>
+                  Blog
+                </Link>
               </li>
             </ul>
           </div>
         </div>
-
       </nav>
     </header>
   );
