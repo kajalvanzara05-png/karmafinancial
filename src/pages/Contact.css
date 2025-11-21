@@ -1,97 +1,118 @@
-/* General Container */
-.contact-container {
-  max-width: 600px;
-  margin: 60px auto;
-  padding: 30px;
-  background-color: #f9fafb;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Poppins', sans-serif;
+/* MAIN WRAPPER */
+.contact-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: block;
+  background: #ffffff;
+  padding-top: 0px;
+  margin: 0;
 }
 
-/* Headings */
-.contact-heading {
+/* CARD */
+.contact-card {
+  width: 600px;
+  margin: auto;
+  padding-top: 0px;
+}
+
+/* HEADING */
+.contact-title {
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
-  color: #10621f;
-  font-size: 30px;
   margin-bottom: 10px;
-  font-weight: bolder;
+  color: #000;
 }
 
-.contact-subtext {
+.contact-subtitle {
+  font-size: 15px;
   text-align: center;
   color: #555;
-  margin-bottom: 25px;
-  font-size: 12px;
+  margin-bottom: 5px;
 }
 
-/* Form */
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* FORM CONTROL - CLEAN (NO OUTER BOX) */
+.form-control {
+  position: relative;
+  margin-bottom: 22px;
+  background: none;        /* ⭐ Outer box removed */
+  padding: 0;              /* ⭐ Space removed */
+  border: none;            /* ⭐ Border removed */
+  box-shadow: none;        /* ⭐ Shadow removed */
 }
-.contact-label{
-    font-weight: 500;
-    text-align: left;
-}
-.contact-input,
-.contact-textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+
+/* INPUT + TEXTAREA */
+.form-control input,
+.form-control textarea {
+  width: 100%;
+  padding: 18px;
+  border: 2px solid #dcdcdc;
+  border-radius: 10px;
   outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.contact-input:focus,
-.contact-textarea:focus {
-  border-color: #0a2540;
-}
-
-/* Button */
-.contact-button {
-  padding: 12px 25px;
-  border-radius: 8px;
-  border: none;
-  background-color: #265814;
-  color: white;
   font-size: 16px;
-  cursor: pointer;
-  display: block;          /* Center button */
-  margin: 20px auto 0;     /* Top spacing, auto left/right */
-  width: fit-content;      /* Width based on content */
-  transition: background 0.3s ease;
+  background: #fff;           /* ⭐ Only input box visible */
+  transition: 0.3s ease;
 }
 
-.contact-button:hover {
-  background-color: #265814;
+/* SMALL TEXTAREA */
+.form-control textarea {
+  min-height: 90px !important;
 }
 
-/* Success Message */
-.success-message {
-  text-align: center;
-  color: green;
-  font-weight: bold;
-  margin-top: 20px;
+/* FOCUS EFFECT */
+.form-control input:focus,
+.form-control textarea:focus {
+  border-color: #0d6efd;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .contact-container {
-    margin: 30px 20px;
-    padding: 20px;
-  }
-  .error-text {
-  color: red;
-  font-size: 14px;
-  margin-top: -8px;
+/* LABEL SMALL */
+.form-control label {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  font-size: 13.5px;
+  color: #80868b;
+  pointer-events: none;
+  transition: 0.3s ease;
 }
 
-
-  .contact-heading {
-    font-size: 24px;
-  }
+.form-control input:focus + label,
+.form-control input:valid + label {
+  transform: translateY(-40px) scale(0.85);
+  background: #fff;
+  padding: 0 6px;
+  color: #0d6efd;
 }
 
+/* TEXTAREA LABEL */
+.textarea-control label {
+  top: 30px;
+}
+
+.textarea-control textarea:focus + label,
+.textarea-control textarea:valid + label {
+  transform: translateY(-40px) scale(0.85);
+  background: #fff;
+  padding: 0 6px;
+  color: #0d6efd;
+}
+
+/* BUTTON FIX */
+.btn-submit {
+  width: 180px;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-size: 18px;
+  display: block;
+  margin: 10px auto 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background: #218838;
+}

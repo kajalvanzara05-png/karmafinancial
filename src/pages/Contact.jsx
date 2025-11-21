@@ -1,113 +1,124 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+// Contact.jsx
+import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Contact.css";
 
 const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitSuccessful },
-    reset,
-  } = useForm();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  // Super Strict Email Check
-  const strictEmail =
-    /^[A-Za-z0-9._%+-]{3,}@[A-Za-z0-9-]{3,}\.[A-Za-z]{2,}$/;
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  // Super Strict Mobile Number (exact 10 digits)
-  const strictPhone = /^[0-9]{10}$/;
+  const [errors, setErrors] = useState({});
 
-  const onSubmit = (data) => {
-    console.log("Form Submitted:", data);
-    reset(); // form clear ho jayega
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const validate = () => {
+    let err = {};
+
+    if (!formData.name.trim()) err.name = "Enter your full name";
+
+    if (!formData.email.trim()) err.email = "Enter your email";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+      err.email = "Invalid email";
+
+    if (!formData.phone.trim()) err.phone = "Enter phone number";
+    else if (!/^\d{10}$/.test(formData.phone)) err.phone = "Phone must be 10 digits";
+
+    if (!formData.message.trim()) err.message = "Enter your message";
+
+    setErrors(err);
+    return Object.keys(err).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+
+    alert("Form Submitted Successfully!");
   };
 
   return (
-    <div className="contact-container">
-      <h2 className="contact-heading">Get in Touch</h2>
-      <h5>Whether you have questions, need assistance, or want to explore your financial future — we’re here to help.</h5>
+    <div className="contact-wrapper">
+      <div className="contact-card">
 
-      {isSubmitSuccessful ? (
-        <p className="success-message">
-          Your message has been successfully sent!
+        <h2 className="contact-title">Contact Us</h2>
+        <p className="contact-subtitle">
+          Whether you have questions or need assistance — we’re here to help.
         </p>
-      ) : (
-        <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
 
-          {/* NAME */}
-          <label className="contact-label">Name</label>
-          <input
-            className="contact-input"
-            placeholder="Enter Your Name"
-            {...register("name", {
-              required: "Name is required",
-              minLength: {
-                value: 3,
-                message: "Name must be at least 3 characters",
-              },
-            })}
-          />
-          {errors.name && (
-            <p className="error-text">{errors.name.message}</p>
-          )}
-
-          {/* MOBILE NUMBER */}
-          <label className="contact-label">Mobile Number</label>
-          <input
-            className="contact-input"
-            placeholder="Enter Your Mobile Number"
-            {...register("phone", {
-              required: "Mobile number is required",
-              pattern: {
-                value: strictPhone,
-                message: "Mobile number must be exactly 10 digits",
-              },
-            })}
-          />
-          {errors.phone && (
-            <p className="error-text">{errors.phone.message}</p>
-          )}
+        <form onSubmit={handleSubmit}>
+          {/* FULL NAME */}
+          <div className="form-control">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              required
+              onChange={handleChange}
+              className={errors.name ? "is-invalid" : ""}
+            />
+            <label>Full Name</label>
+            {errors.name && <div className="invalid-feedback d-block">{errors.name}</div>}
+          </div>
 
           {/* EMAIL */}
-          <label className="contact-label">Email</label>
-          <input
-            className="contact-input"
-            placeholder="Enter Your Email"
-            {...register("email", {
-              required: "Email is required",
-              pattern: {
-                value: strictEmail,
-                message: "Invalid email format",
-              },
-            })}
-          />
-          {errors.email && (
-            <p className="error-text">{errors.email.message}</p>
-          )}
+          <div className="form-control">
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              required
+              onChange={handleChange}
+              className={errors.email ? "is-invalid" : ""}
+            />
+            <label>Email Address</label>
+            {errors.email && <div className="invalid-feedback d-block">{errors.email}</div>}
+          </div>
+
+          {/* PHONE */}
+          <div className="form-control">
+            <input
+              type="text"
+              name="phone"
+              value={formData.phone}
+              required
+              onChange={handleChange}
+              className={errors.phone ? "is-invalid" : ""}
+            />
+            <label>Mobile Number</label>
+            {errors.phone && <div className="invalid-feedback d-block">{errors.phone}</div>}
+          </div>
 
           {/* MESSAGE */}
-          <label className="contact-label">Message</label>
-          <textarea
-            className="contact-textarea"
-            rows="5"
-            placeholder="Enter Your Message"
-            {...register("message", {
-              required: "Message is required",
-              minLength: {
-                value: 5,
-                message: "Message must be at least 5 characters",
-              },
-            })}
-          ></textarea>
-          {errors.message && (
-            <p className="error-text">{errors.message.message}</p>
-          )}
+          <div className="form-control textarea-control">
+            <textarea
+              name="message"
+              value={formData.message}
+              required
+              rows="3"
+              onChange={handleChange}
+              className={errors.message ? "is-invalid" : ""}
+            ></textarea>
+            <label>Message</label>
+            {errors.message && (
+              <div className="invalid-feedback d-block">{errors.message}</div>
+            )}
+          </div>
 
-          <button type="submit" className="contact-button">
+          <button type="submit" className="btn-submit">
             Send Message
           </button>
         </form>
-      )}
+      </div>
     </div>
   );
 };
