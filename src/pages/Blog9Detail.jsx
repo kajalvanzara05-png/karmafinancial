@@ -18,16 +18,17 @@ export default function Blog1Detail() {
           Published on <time dateTime="2025-11-07">11/7/2025</time>
         </p>
       </header>
-        <img
+      <img
         src={b9}
         className="blog-detail-img"
-        style={{height:"auto",width:"100%"}}
+        style={{ height: "auto", width: "100%" }}
 
       />
 
       <section className="mb-6">
+        <h1 className="text-xxl" >Introduction</h1>
         <p>
-          Aaj kal har jagah ek hi baat hoti hai “Share market me paisa lagao, returns kamao!” 
+          Aaj kal har jagah ek hi baat hoti hai “Share market me paisa lagao, returns kamao!”
           Lekin jab koi middle-class insaan sochta hai shuru karne ka, to pehla sawal aata hai:
         </p>
         <ul className="list-disc list-inside ml-5">
@@ -36,7 +37,7 @@ export default function Blog1Detail() {
           <li>“Kisi broker ke bina kar sakta hu?”</li>
         </ul>
         <p>To chalo, aaj hum simple language me samjhte hain ki share market me investment kaise start karein — bina confusion aur bina fear ke.</p>
-      </section>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 1: Understand What Is Share Market</h2>
@@ -45,10 +46,11 @@ export default function Blog1Detail() {
           Jab aap koi company ka share kharidte ho, to aap us company ke chhote malik ban jaate ho.
         </p>
         <p>
-          For example: Agar aap Tata Motors ka 1 share kharidte ho, to aap Tata Motors ke ek tiny shareholder ban jaate ho.
+          For example:
+          Agar aap Tata Motors ka 1 share kharidte ho, to aap Tata Motors ke ek tiny shareholder ban jaate ho.
           Company profit karti hai to aapko bhi fayda milta hai — share price badhne se ya dividend ke form me.
         </p>
-      </section>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 2: Clear Your Basics</h2>
@@ -59,13 +61,14 @@ export default function Blog1Detail() {
           <li><strong>Broker:</strong> Platform jahan se aap trading/investing karte ho (like Zerodha, Groww, AngelOne)</li>
         </ul>
         <p>Without a Demat + Trading account, you cannot buy shares.</p>
-      </section>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 3: Open Your Demat & Trading Account</h2>
         <p>
           This is your entry gate to the stock market. Aap online 10 minutes me account khol sakte ho.
         </p>
+        <p>You just need:</p>
         <ul className="list-disc list-inside ml-5">
           <li>PAN card</li>
           <li>Aadhaar card</li>
@@ -73,7 +76,8 @@ export default function Blog1Detail() {
           <li>Selfie and signature</li>
         </ul>
         <p>Once verified, your account gets activated within 24 hours.</p>
-      </section>
+        <p>(Referral link at the end for easy signup 👇)</p>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 4: Start Small and Learn</h2>
@@ -85,7 +89,7 @@ export default function Blog1Detail() {
           <li>Rule No.1: Invest in companies whose products you use or understand.</li>
           <li>Rule No.2: Don’t follow rumors or tips — follow logic and charts.</li>
         </ul>
-      </section>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 5: Choose Between Trading and Investing</h2>
@@ -114,28 +118,33 @@ export default function Blog1Detail() {
           </tbody>
         </table>
         <p>If you’re a beginner or salaried person, start with long-term investing — it’s safer and more rewarding.</p>
-      </section>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 6: Start With SIP in Stocks or Mutual Funds</h2>
         <p>
-          If you don’t want to track daily ups and downs — start a Stock SIP or Mutual Fund SIP.
-          Every month fixed amount invest hota rahega automatically.
+          If you don’t want to track daily ups and downs —
+          start a Stock SIP or Mutual Fund SIP.
         </p>
+        <p>Every month fixed amount invest hota rahega automatically.
+          Aise hi aap steady wealth bana sakte ho without stress.</p>
         <p>
-          Example: Invest ₹2000/month in Nifty 50 Index Fund for 10 years → ₹4.6 lakh (12% return).
+          Example:
+          Invest ₹2000/month in Nifty 50 Index Fund for 10 years → ₹4.6 lakh ban sakte hain (12% return).
         </p>
-      </section>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 7: Learn Continuously</h2>
-        <p>Share market me knowledge sabse bada weapon hai. Seekho har din:</p>
+        <p>Share market me knowledge sabse bada weapon hai.
+          Aapko har din kuch naya seekhna chahiye:</p>
         <ul className="list-disc list-inside ml-5">
           <li>Company ka balance sheet kaise padhe</li>
           <li>Chart patterns kya hote hain</li>
           <li>Economic news ka impact kaise samjhe</li>
         </ul>
-      </section>
+        <p>You can follow financial YouTubers, read blogs (like this one 😉), and practice on demo apps.</p>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 8: Avoid These Common Mistakes</h2>
@@ -147,16 +156,22 @@ export default function Blog1Detail() {
           <li>✅ Think long-term</li>
         </ul>
       </section>
+      <section>
+        <footer className="mt-6 border-t pt-6 text-sm text-gray-700">
+          <h2>❤️Conclusion</h2>
+          <p>Investment ka main rule simple hai —<br />“Start early, start small, but start now.”</p>
+          <p>
+            Aaj ₹500 se start karoge to kal wo ₹5 lakh ban sakta hai — sirf patience aur discipline ke saath.
+          </p>
+          <p>Middle-class families ke liye share market ek golden opportunity hai — bas dar ko door karo aur learning ke saath grow karo.</p>
 
-      <footer className="mt-6 border-t pt-6 text-sm text-gray-700">
-        <h2>Conclusion</h2>
-        <p>Investment ka main rule simple hai — “Start early, start small, but start now.”</p>
-        <p>
-          Aaj ₹500 se start karoge to kal wo ₹5 lakh ban sakta hai — sirf patience aur discipline ke saath.
-        </p>
-        <p>Middle-class families ke liye share market ek golden opportunity hai — bas dar ko door karo aur learning ke saath grow karo.</p>
-        <p>🔗 My Recommended Broker: Open Your Free Demat & Trading Account</p>
-      </footer>
+        </footer></section>
+      <section><hr />
+        <h2>🔗 My Recommended Broker: Open Your Free Demat & Trading Account</h2>
+        <p>If you’re ready to start your journey,
+          you can open your free Demat account here</p>
+        <a target="_blank" rel="noopener noreferrer nofollow" href="https://groww.in/"><strong>Open Your Free Demat &amp; Trading Account </strong></a>
+      </section><hr />
     </article>
   );
 }

@@ -62,8 +62,8 @@ const blogData = [
     title: "How to Find Multibagger Stocks in the Indian Stock Market",
     date: "11/12/2025",
     image: b6,
-    shortDesc: "Dream of multiplying your money 5x, 10x, or even 50x? 💰 Learn about Multibagger Stocks — what they are, how to spot them, and the key signs to watch. Discover how middle-class investors can grow long-term wealth and see real Indian examples like Tata Elxsi, Polycab, IRCTC, and Asian Paints that turned small investments into crores. 🚀 Start thinking like a long-term wealth builder, not a short-term trader.",
-    detailLink: "/blog/6"
+   shortDesc: "Learn how to spot Multibagger stocks and grow long-term wealth with real Indian examples like Tata Elxsi, Polycab, IRCTC, and Asian Paints.",
+   detailLink: "/blog/6"
   },
   {
     id: 7,

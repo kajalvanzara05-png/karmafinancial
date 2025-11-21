@@ -1,5 +1,6 @@
+/* Section */
 .blog-section {
-  padding: 50px 20px;
+  padding: 10px 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -11,19 +12,29 @@
   font-weight: bold;
 }
 
+/* Grid layout */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
+/* Card */
 .blog-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
   background: #fff;
-  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  /* fixed height */
+  background: transparent;
+  /* transparent background */
+  box-shadow: none;
 }
 
 .blog-card:hover {
@@ -31,41 +42,64 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Image container */
 .img-box {
   position: relative;
+  background-color: #fff;
   width: 100%;
-  height: 180px;
+  height: 60%;
+  /* image area */
+  display: flex;
+  justify-content: center;
+  /* horizontal center */
+  align-items: center;
+  /* vertical center */
   overflow: hidden;
 }
 
 .img-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
-  display: block;
+  /* fit image inside container */
+  transition: transform 0.5s ease;
 }
 
+.blog-card:hover .img-box img {
+  transform: scale(1.1);
+}
+
+/* Overlay on hover */
 .img-box .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  color: #fff;
 }
 
 .img-box:hover .overlay {
   opacity: 1;
 }
 
+/* Card body */
 .card-body {
+  flex: 1;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-date {
-  color: #888;
+  color: #393434;
   font-size: 0.85rem;
   margin-bottom: 8px;
 }
@@ -73,10 +107,13 @@
 .card-title {
   font-size: 1.1rem;
   margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: 700;
+ 
 }
 
 .card-text {
   font-size: 0.95rem;
-  color: #555;
+  color: #000000;
+  flex: 1;
+
 }

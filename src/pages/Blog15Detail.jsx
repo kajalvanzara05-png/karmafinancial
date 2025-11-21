@@ -21,53 +21,48 @@ export default function BlogWhyWeNeedToInvest() {
         src={b15}
         className="blog-detail-img"
         style={{ height: "auto", width: "100%" }}
-      />
+      /><hr/><br/>
 
       {/* INTRO */}
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-3">
           Why Do We Need to Invest? (A Reality Check for Middle-Class Families)
-        </h2>
+        </h2><hr/>
+        <h1 text-xxl>Introduction</h1>
         <p>
-          Every middle-class person dreams of a better tomorrow — a good education for
-          children, a comfortable home, and a peaceful retirement. But with EMIs, rent,
-          and bills, thinking about the future feels impossible.
+          Every middle-class person dreams of a better tomorrow a good education for children, a comfortable home, and a peaceful retirement.
+          But between EMIs, rent, and monthly bills, it often feels impossible to think about the future.
+          Still, the truth is simple<br />if you don’t invest your money today, your future will always remain uncertain.
         </p>
         <p>
-          Still, one truth remains — if you don’t invest today, your future will always
-          remain uncertain. Here’s why investment is a necessity, not a choice.
+          Let’s understand why investment is not just a choice, but a necessity.
         </p>
-      </section>
+      </section><hr />
 
       {/* 1. Savings Are Not Enough */}
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">1. Savings Are Not Enough Anymore</h2>
-        <p>
-          Most people believe saving in a bank account is enough. But inflation reduces
-          your money’s value every year.
-        </p>
+        <p>Most of us think saving money in a bank account is enough.<br />
+          But let’s face the truth the world has changed, and so has the value of money.</p>
 
-        <p className="mt-2">
-          Example:  
-          In 2010, 25 kg rice cost ₹700.  
-          In 2025, the same bag costs ₹1,300+.  
-          That’s inflation — your money buys less over time.
-        </p>
+        <p>Prices of everything from vegetables to school fees are increasing every year.<br />
+          This rise in prices is called inflation.<br />
+          If your money is lying idle in a savings account, earning 3–4% interest, but inflation is 7–8%,<br />
+          then in reality, your money is losing its value every year.</p>
 
-        <p>
-          Savings at 3–4% interest cannot beat inflation at 7–8%.
-        </p>
-      </section>
+        <p>Example:<br />
+          In 2010, you could buy a 25 kg rice bag for ₹700.<br />
+          In 2025, the same bag costs over ₹1,300.<br />
+          That’s inflation in action and that’s why saving alone can’t secure your future.</p>
+      </section><hr />
 
       {/* 2. Helps Money Grow */}
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">2. Investment Helps Your Money Grow</h2>
-        <p>Investment allows your money to grow faster than inflation.</p>
-
-        <p className="mt-2 font-semibold">Real example:</p>
-        <p>
-          Ramesh, age 30, invests ₹2,000/month with 12% returns.
-        </p>
+        <p>Investment means making your money work for you.<br />
+          When you invest, you give your money a chance to grow faster than inflation.</p>
+        <p>Let’s understand this with a real-life example:</p>
+        <p>Ramesh, a 30-year-old employee, starts investing ₹2,000 per month in a mutual fund SIP that gives 12% annual returns.</p>
 
         <table className="info-table mt-3">
           <thead>
@@ -99,7 +94,7 @@ export default function BlogWhyWeNeedToInvest() {
         <p className="mt-2">
           This is the power of compounding—your returns earn returns.
         </p>
-      </section>
+      </section><hr />
 
       {/* 3. Financial Security */}
       <section className="mb-6">
@@ -107,21 +102,25 @@ export default function BlogWhyWeNeedToInvest() {
           3. Financial Security for Your Family
         </h2>
         <p>
-          Emergencies like job loss or medical needs come without warning. Investments
-          create a financial safety cushion that protects your family during tough times.
+          mergencies never come with a warning<br />
+          job loss, medical expenses, or family needs can come anytime.
         </p>
-      </section>
+        <p>Investment builds a financial cushion that helps you stay strong during tough times.<br />
+          Whether it’s your child’s education, your parents’ health, or your retirement plan investments ensure your family’s stability, even when income stops.</p>
+      </section><hr />
 
       {/* 4. Freedom */}
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">4. Freedom and Peace of Mind</h2>
         <p>
-          When your investments grow, you gain freedom and confidence:
+          When you have investments working for you, you’re not just earning you’re buying peace of mind.
         </p>
-        <blockquote className="italic mt-2">
-          “Even if I stop working tomorrow, my money will take care of me.”
-        </blockquote>
-      </section>
+        <p>Imagine the confidence of knowing:</p>
+        <p>That’s the real power of investing freedom.
+          <br />Freedom from stress, from constant worry, and from financial dependence.
+
+        </p>
+      </section><hr />
 
       {/* 5. Achieve Life Goals */}
       <section className="mb-6">
@@ -129,23 +128,30 @@ export default function BlogWhyWeNeedToInvest() {
           5. Achieve Your Life Goals on Time
         </h2>
         <p>
-          Investments help you achieve dreams like a car, house, or travel. You don’t
-          need lakhs—start with ₹500 per month and grow consistently.
+          Everyone has dreams<br />
+          buying a car, owning a house, starting a business, or travelling the world.
+        </p>
+        <p>Investment helps you turn these dreams into reality, step by step.<br />
+          You don’t need to invest lakhs start small.<br />
+          Even ₹500 a month can grow into something meaningful over time if you stay consistent.
+
         </p>
       </section>
 
       {/* Conclusion */}
-      <footer className="mt-6 border-t pt-6">
-        <h2 className="text-lg font-semibold">Conclusion: Start Today, Not Someday</h2>
-        <p>
-          Investment isn’t for the rich—it’s for anyone who wants a better tomorrow.
-          Start with whatever you can and stay consistent. Time will multiply your money.
-        </p>
-
-        <blockquote className="italic mt-2">
-          “Don’t wait to have more money to invest — start investing so you can have more money.”
-        </blockquote>
+      <section>
+        <footer className="mt-6 border-t pt-6">
+        <h2 className="text-lg font-semibold">❤️Conclusion: Start Today, Not Someday</h2>
+        <p>Investment is not only for rich people it’s for everyone who wants a better future.<br/>
+          Middle-class families can change their financial destiny with small, regular investments.</p>
+        <p>Remember this simple rule:</p>
+        <p>“Don’t wait to have more money to invest<br/>
+          start investing so that you can have more money.”</p>
+        <p>Start with what you can. Stay consistent.<br/>
+          Because the sooner you start, the stronger your future becomes.</p>
       </footer>
+      </section><hr/>
+      
 
     </article>
   );

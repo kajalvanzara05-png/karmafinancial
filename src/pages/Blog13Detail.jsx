@@ -18,58 +18,66 @@ export default function Blog1Detail() {
           Published on <time dateTime="2025-11-06">11/6/2025</time>
         </p>
       </header>
-          <img
+      <img
         src={b13}
         className="blog-detail-img"
-        style={{height:"auto",width:"100%"}}
+        style={{ height: "auto", width: "100%" }}
 
       />
       <section className="mb-6">
+        <h3 >How to Plan Your Investments According to Your Financial Situation (A Realistic Guide for Middle-Class People)</h3><hr />
+        <h1 className="text-xxl">Introduction</h1>
         <p>
-          For most middle-class families, every month starts with hope and ends with calculations — rent, EMIs, groceries, fees, and bills. Whatever remains is your “savings,” but savings are not investments.
+          For most middle-class families, every month starts with hope and ends with calculations — rent, EMIs, groceries, fees, and bills. After all that, whatever remains, we call “savings.”
         </p>
-        <p>
-          If you truly want your money to work for you, you need a plan — one that fits your real-life financial situation. Let’s break it down step-by-step.
+        <p> But here’s the truth — savings are not investments.<br />
+          If you truly want your money to work for you, you need a plan one that fits your real-life financial situation.
         </p>
-      </section>
+        <p>Let’s break down how you can plan your investments step-by-step — practically, smartly, and without taking unnecessary risks.</p>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 1: Understand Where You Stand Financially</h2>
+        <p>Before you invest, you need to understand your money flow.</p>
         <p>Write down:</p>
         <ul className="list-disc list-inside ml-5">
           <li>Your monthly income</li>
-          <li>Fixed expenses (rent, EMIs, bills)</li>
-          <li>Variable expenses (food, travel, shopping)</li>
+          <li>Your fixed expenses (rent, EMIs, bills)</li>
+          <li>Your variable expenses (food, travel, shopping)</li>
           <li>What’s left for saving</li>
         </ul>
-        <p>Example: If you earn ₹40,000 and spend ₹28,000 → ₹12,000 left. Don’t invest all — divide wisely.</p>
-      </section>
+        <p>Example 👇<br />
+          If you earn ₹40,000 and spend ₹28,000 → you have ₹12,000 left.
+          Now the smart move is not to invest all ₹12,000 but to divide it wisely.</p>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 2: Create an Emergency Fund First</h2>
-        <p>
-          Investment without safety is like driving without a seatbelt. Build an emergency fund:
+        <p>Investment without safety is like driving without a seatbelt.<br />
+          Before investing, build an emergency fund.</p>
+
+        <p>✅ Keep 3–6 months of expenses aside in a liquid mutual fund or savings account.<br />
+          If your monthly expenses are ₹25,000 → save ₹75,000 to ₹1,50,000.
         </p>
-        <ul className="list-disc list-inside ml-5">
-          <li>Keep 3–6 months of expenses aside</li>
-          <li>Use a liquid mutual fund or savings account</li>
-        </ul>
-      </section>
+        <p>This fund acts like your financial shield helping you stay strong during medical issues, job loss, or family emergencies.</p>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 3: Secure Yourself with Insurance</h2>
-        <p>
-          Protect yourself before investing. Insurance ensures family safety if anything unexpected happens.
-        </p>
-        <ul className="list-disc list-inside ml-5">
-          <li>Take health insurance even if your company provides one</li>
-          <li>Take term life insurance (not endowment or money-back)</li>
-        </ul>
-      </section>
+        <p>No investment plan is complete without protection.</p>
+
+        <p>Think of it this way<br />  If something unexpected happens to you, your investments won’t help your family immediately, but insurance will.</p>
+
+
+        <p>✔️ Take health insurance even if your company provides one.<br />
+          ✔️ Take term life insurance (not endowment or money-back).</p>
+
+        <p>Once your family is safe, you can invest without fear.</p>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 4: Set Clear and Realistic Financial Goals</h2>
-        <p>Investing without goals is like traveling without a destination. Examples:</p>
+        <p>Investing without goals is like traveling without a destination.<br />You must know why you’re investing.</p>
         <table className="info-table">
           <thead>
             <tr>
@@ -82,13 +90,13 @@ export default function Blog1Detail() {
           <tbody>
             <tr>
               <td>Short-Term</td>
-              <td>Vacation, vehicle</td>
+              <td>Vacation,buying a vehicle</td>
               <td>1–3 years</td>
               <td>FD, Liquid Fund</td>
             </tr>
             <tr>
               <td>Medium-Term</td>
-              <td>Child’s education, house down payment</td>
+              <td>child’s education, house down payment</td>
               <td>3–7 years</td>
               <td>SIP in Hybrid Mutual Fund</td>
             </tr>
@@ -100,20 +108,26 @@ export default function Blog1Detail() {
             </tr>
           </tbody>
         </table>
-      </section>
+        <p>Having clear goals helps you decide how much risk to take and where to invest.</p>
+      </section><hr />
 
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Step 5: Follow the 50-30-20 Rule</h2>
+        <h2 className="text-xl font-semibold mb-2">Step 5: Follow the 50-30-20 Rule (Your Budget Foundation)</h2>
         <ul className="list-disc list-inside ml-5">
           <li>50% – Needs: Rent, EMIs, groceries, education</li>
           <li>30% – Wants: Shopping, dining, movies, travel</li>
           <li>20% – Investments/Savings: SIPs, insurance, goals</li>
         </ul>
-        <p>If 20% is hard, start with 10% — consistency matters more than amount.</p>
-      </section>
+        <p>If saving 20% feels hard, start with 10%.<br />
+          The key is consistency not the amount.</p>
+      </section><hr />
 
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Step 6: Diversify Your Investments</h2>
+        <h2 className="text-xl font-semibold mb-2">Step 6: Diversify Your Investments (Don’t Put All Eggs in One Basket)</h2>
+        <p>Every investment has its own risk and return level.<br />
+          So, build a balanced mix that matches your comfort level.
+
+        </p>
         <table className="info-table">
           <thead>
             <tr>
@@ -149,38 +163,47 @@ export default function Blog1Detail() {
               <td>Higher risk, higher return</td>
             </tr>
           </tbody>
-        </table>
-      </section>
+        </table><br />
+        <p>This diversification gives you stability and growth together.</p>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 7: Automate and Review Regularly</h2>
-        <ul className="list-disc list-inside ml-5">
-          <li>Automate SIPs through auto-debit</li>
-          <li>Review portfolio every 6–12 months</li>
-          <li>Increase SIP if salary rises</li>
-          <li>Move to safer options when nearing goals</li>
+        <p>The easiest way to stay consistent? Automate your SIPs.<br />
+          Set up auto-debit from your bank so you invest before you spend.</p>
+        <p>Review your portfolio every 6–12 months:</p>
+        <ul>
+          <li>If your salary increases → raise your SIP.</li>
+          <li>If you’re nearing a goal → move to safer options like debt funds.</li>
         </ul>
-      </section>
+        <p>Smart investors don’t check prices daily, they review plans yearly.</p>
+      </section><hr />
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Step 8: Start Small, But Start Early</h2>
-        <p>
-          Even ₹500–₹1000 monthly SIP can grow big in the long run.
-        </p>
-        <p>
-          Example: ₹1,000/month for 25 years at 12% returns → ₹14 lakh from ₹3 lakh invested. That’s compounding magic.
-        </p>
+        <p>Many people wait for “the right time” to invest.<br />
+          But in reality, the right time is today.</p>
+        <p>Even ₹500–₹1000 monthly SIP can grow big in the long run.<br />
+          Here’s proof:</p>
+        <p>If you invest ₹1000 per month for 25 years with 12% returns →<br />
+          you’ll get ₹14 lakh from an investment of just ₹3 lakh!</p>
+        <p>That’s the magic of compounding.</p>
       </section>
 
-      <footer className="mt-6 border-t pt-6 text-sm text-gray-700">
-        <h2>Conclusion: Your Money Should Work as Hard as You Do</h2>
-        <p>
-          Investment planning is not about becoming rich overnight. It’s about creating financial peace and letting your money grow with you.
-        </p>
-        <blockquote className="ml-5 italic">
-          “People who plan their money, control their life. People who don’t, get controlled by money.”
-        </blockquote>
-      </footer>
+      <section>
+        <footer className="mt-6 border-t pt-6 text-sm text-gray-700">
+          <h2>Conclusion: Your Money Should Work as Hard as You Do</h2>
+          <p>  Investment planning is not about becoming rich overnight.<br />
+            It’s about creating financial peace so you can live freely without stress.</p>
+          <p> No matter how small your income, planning makes it powerful.</p>
+          <p>Remember:<br /> “People who plan their money, control their life.<br />
+            People who don’t, get controlled by money.”</p>
+          <p>Start today, plan smart, and let your money grow with you 🌱💰</p>
+
+
+        </footer>
+      </section><hr/>
+
     </article>
   );
 }
