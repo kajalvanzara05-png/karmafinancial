@@ -15,19 +15,25 @@ const Partners = () => {
 
   return (
     <motion.div
-      className="container py-5 text-center"
+      className="container py-5 text-center partners-bg"
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}
     >
-      <h1 className="mb-3">🤝 Join the Karma Financial Network 🤝</h1>
-      <p className="lead">Be part of a growing legacy of financial empowerment.</p>
-      <p className="lead mb-4">
+        
+        <h1 className="mb-3 text-white underline-title">
+          🤝 Join the Karma Financial Network 🤝</h1>
+
+      <p className="lead text-white">
+        Be part of a growing legacy of financial empowerment.
+      </p>
+
+      <p className="lead mb-4 text-white">
         Start your journey with Karma Financial and help others grow their wealth confidently.
       </p>
 
-      <h2 className="mb-4">Our Trusted Partners</h2>
+      <h2 className="mb-4 text-white">Our Trusted Partners</h2>
 
       {/* Slider */}
       <div className="partner-slider-wrapper overflow-hidden">
@@ -49,7 +55,8 @@ const Partners = () => {
         href="https://a.aonelink.in/ANGOne/OVAk2Su"
         target="_blank"
         rel="noopener noreferrer"
-        className="btn btn-primary btn-lg mt-4"
+        className="btn btn-primary btn-lg mt-4 invest-btn"
+
       >
         📩 Start Investment
       </a>

@@ -1,31 +1,65 @@
+/* Background Color Only */
+.partners-bg {
+  background-color: #060606;
+  border-radius: 10px;
+}
+
+/* Slider Wrapper */
 .partner-slider-wrapper {
-  overflow: hidden; /* Slider ne container mathi bahar na javani */
+  overflow: hidden;
   position: relative;
   margin: 0 auto;
 }
 
+/* Slider */
 .partner-slider {
   display: flex;
-  gap: 2rem; /* Logo vachche space */
-  animation: scroll 20s linear infinite; /* Continuous scrolling effect */
+  gap: 2rem;
+  animation: scroll 20s linear infinite;
 }
 
+/* Logo Images */
 .partner-slider img {
-  max-height: 80px; /* Logos ni height limit */
+  max-height: 80px;
   object-fit: contain;
+  background-color: #ffffff;
 }
 
 .small-logo {
-  max-height: 60px; /* Chhota logos */
+  max-height: 60px;
 }
 
-/* Slider scroll animation */
+/* Scroll Animation */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Logos duplicate thava thi continuous scroll */
+    transform: translateX(-50%);
   }
 }
 
+/* 🔥 ADD — Title Underline */
+.underline-title {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-title::after {
+  content: "";
+  width: 60%;
+  height: 4px;
+  background: #ff9d00;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+}
+
+/* 🔥 ADD — Gradient Button */
+.invest-btn {
+  background: linear-gradient(135deg, #ff7a00, #ffae00) !important;
+  color: #ffffff !important;
+  border: none !important;
+}

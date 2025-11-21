@@ -1,10 +1,10 @@
 /* MAIN WRAPPER */
 .contact-wrapper {
-  min-height: 100vh;
   width: 100%;
   display: block;
   background: #ffffff;
   padding-top: 50px;
+  padding-bottom: 20px;   /* ⭐ small bottom spacing */
   margin: 0;
 }
 
@@ -122,19 +122,20 @@
 
   .contact-wrapper {
     padding: 10px;
+    padding-bottom: 20px;  /* ⭐ small bottom gap */
   }
 
   .contact-card {
-    width: 100% !important;     /* ⭐ FULL WIDTH IN PHONE */
-    padding: 0 10px;            /* Side padding for spacing */
+    width: 100% !important;
+    padding: 0 10px;
   }
 
   .form-control input,
   .form-control textarea {
-    padding: 16px !important;   /* Slight smaller padding */
+    padding: 16px !important;
   }
 
   .btn-submit {
-    width: 100% !important;     /* Button also full width */
+    width: 100% !important;
   }
 }
