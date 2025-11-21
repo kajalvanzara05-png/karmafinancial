@@ -4,7 +4,7 @@
   width: 100%;
   display: block;
   background: #ffffff;
-  padding-top: 0px;
+  padding-top: 50px;
   margin: 0;
 }
 
@@ -31,14 +31,14 @@
   margin-bottom: 5px;
 }
 
-/* FORM CONTROL - CLEAN (NO OUTER BOX) */
+/* FORM CONTROL - CLEAN */
 .form-control {
   position: relative;
   margin-bottom: 22px;
-  background: none;        /* ⭐ Outer box removed */
-  padding: 0;              /* ⭐ Space removed */
-  border: none;            /* ⭐ Border removed */
-  box-shadow: none;        /* ⭐ Shadow removed */
+  background: none;
+  padding: 0;
+  border: none;
+  box-shadow: none;
 }
 
 /* INPUT + TEXTAREA */
@@ -50,7 +50,7 @@
   border-radius: 10px;
   outline: none;
   font-size: 16px;
-  background: #fff;           /* ⭐ Only input box visible */
+  background: #fff;
   transition: 0.3s ease;
 }
 
@@ -115,4 +115,26 @@
 
 .btn-submit:hover {
   background: #218838;
+}
+
+/* ------------------- MOBILE FIX (⭐ IMPORTANT) ------------------- */
+@media (max-width: 480px) {
+
+  .contact-wrapper {
+    padding: 10px;
+  }
+
+  .contact-card {
+    width: 100% !important;     /* ⭐ FULL WIDTH IN PHONE */
+    padding: 0 10px;            /* Side padding for spacing */
+  }
+
+  .form-control input,
+  .form-control textarea {
+    padding: 16px !important;   /* Slight smaller padding */
+  }
+
+  .btn-submit {
+    width: 100% !important;     /* Button also full width */
+  }
 }

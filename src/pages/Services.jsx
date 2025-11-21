@@ -7,7 +7,7 @@ function Services() {
 
   const items = [
     { icon: "💡", title: "Financial Planning" },      
-    { icon: "📈", title: "Investment Advisory" },     // Updated (icon #1)
+    { icon: "📈", title: "Investment Advisory" },     
     { icon: "🛡️", title: "Insurance Coverage" },
     { icon: "💰", title: "Mutual Funds" },
   ];
