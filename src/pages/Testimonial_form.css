@@ -46,19 +46,17 @@
 }
 
 .submit-btn {
-  background: #28a745;
-  color: white;
   padding: 10px 20px;
-  border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   transition: 0.3s;
+  background: linear-gradient(135deg, #ff7a00, #ffae00) !important;
+  border: none !important;
+  color: white !important;
 }
 
-.submit-btn:hover {
-  background: #218838;
-}
+
 
 .message {
   margin: 15px auto;
