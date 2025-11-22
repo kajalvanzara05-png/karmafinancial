@@ -33,7 +33,7 @@ const Partners = () => {
         Start your journey with Karma Financial and help others grow their wealth confidently.
       </p>
 
-      <h2 className="mb-4 text-white">Our Trusted Partners</h2>
+      <h2 className="partner">Our Trusted Partners</h2>
 
       {/* Slider */}
       <div className="partner-slider-wrapper overflow-hidden">

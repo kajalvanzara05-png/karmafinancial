@@ -10,68 +10,145 @@
 .services h3 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   color: #0a3d62;
+  position: relative;
+  display: inline-block;
+}
+
+/* Yellow underline */
+.services h3::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: #facc15;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
 }
 
 /* Grid Layout */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 25px;
-}
-
-/* CARD (smaller now) */
-.service-card {
-  position: relative;
-  cursor: pointer;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-  width: 100%;
-  max-width: 220px;
+  gap: 15px; 
+  justify-items: center;
+  max-width: 800px; 
   margin: 0 auto;
 }
 
+/* CARD - Modern Premium Style */
+.service-card {
+  background: #FFFBEA; 
+  border: 2px solid  #facc15; 
+  width: 100%;
+  max-width: 200px;   
+  height: 200px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  gap: 12px; 
+  cursor: pointer;
+}
+
+/* Hover Effect */
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  background: #facc15; 
 }
 
-/* OUTER SQUARE BOX (smaller) */
-.service-img {
-  width: 100%;
-  aspect-ratio: 1 / 1;  /* Square */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #eaf2f8;
-}
-
-/* INNER ICON BOX (center + smaller) */
+/* Circular Icon Box */
 .icon-box {
-  width: 90px;
-  height: 90px;
-  border-radius: 12px;
-  background: #ffffff;
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%; /* circular shape */
+  background: #ffffff; 
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Emoji icon smaller */
+/* Emoji Icon */
 .emoji-icon {
-  font-size: 45px;
+  font-size: 40px; 
   line-height: 1;
 }
 
-/* Title */
+/* Card Title */
 .service-card h4 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  padding: 12px 8px;
-  color: #0a3d62;
+  color: #064e3b; /* DARK GREEN */
+  text-align: center;
+  margin: 0;
+}
+
+/* -------------------------
+    Responsive adjustments
+------------------------- */
+@media (min-width: 768px) and (max-width: 992px) {
+  .service-card {
+    max-width: 180px;
+    height: 180px;
+    padding: 15px;
+    gap: 10px;
+  }
+  .icon-box {
+    width: 70px;
+    height: 70px;
+  }
+  .emoji-icon {
+    font-size: 36px;
+  }
+  .service-card h4 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    max-width: 160px;
+    height: 160px;
+    padding: 12px;
+    gap: 8px;
+  }
+  .icon-box {
+    width: 60px;
+    height: 60px;
+  }
+  .emoji-icon {
+    font-size: 34px;
+  }
+  .service-card h4 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    max-width: 140px;
+    height: 140px;
+    padding: 10px;
+    gap: 6px;
+  }
+  .icon-box {
+    width: 50px;
+    height: 50px;
+  }
+  .emoji-icon {
+    font-size: 32px;
+  }
+  .service-card h4 {
+    font-size: 0.9rem;
+  }
 }

@@ -1,10 +1,84 @@
-.mb-3{
-  color: #ff9d00;
-  font-weight: bold;
-  font-size:xx-large;
+/* Section wrapper */
+.container.py-5 {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color:  #facc15; /* warm light yellow */
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+
+  width: 100% !important;       /* full width */
+  max-width: 100% !important;   /* remove Bootstrap container limit */
+  margin: 0 auto;
+
+  display: flex;                 /* flex layout */
+  flex-direction: column;        /* stack elements vertically */
+  align-items: center;           /* center all children horizontally */
 }
-.lead
-{
-  color:black;
-  font-weight: 500px;
+
+/* Heading with underline */
+.mb-3 {
+  color: #064e3b;        /* dark green text */
+  font-weight: bold;
+  font-size: xx-large;
+  position: relative;    /* required for underline positioning */
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Dark green underline for heading */
+.mb-3::after {
+  content: "";
+  position: absolute;
+  width: 50%;            /* underline width */
+  height: 4px;           /* underline thickness */
+  background: #064e3b;   /* dark green underline */
+  bottom: -6px;           /* spacing below text */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+/* Paragraph text */
+.lead {
+  color: #064e3b;        /* dark green for consistency */
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 900px;      /* optional: limit width for readability */
+}
+
+/* Image styling */
+.img-fluid.rounded.shadow {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 80%;        /* scale nicely */
+  height: auto;
+  margin-top: 30px;
+}
+
+/* Optional responsive adjustments */
+@media (max-width: 1200px) {
+  .mb-3 {
+    font-size: 2.2rem;
+  }
+  .lead {
+    font-size: 1.1rem;
+  }
+  .img-fluid.rounded.shadow {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mb-3 {
+    font-size: 1.8rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .img-fluid.rounded.shadow {
+    max-width: 100%;
+  }
 }

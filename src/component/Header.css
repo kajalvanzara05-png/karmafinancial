@@ -24,17 +24,20 @@
   width: auto;
 }
 
-/* nav links */
+/* ------------------------------
+       NAV LINKS (UPDATED)
+------------------------------ */
 .nav-link {
   position: relative;
   display: inline-block;
-  color: #fff !important;
+  color: #064e3b !important;     /* ⭐ DARK GREEN */
   font-weight: 500;
   text-decoration: none;
   padding-bottom: 3px;
   margin-top: 2px;
 }
 
+/* Yellow underline */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -42,7 +45,7 @@
   bottom: 0;
   width: 0%;
   height: 2px;
-  background-color: #fd7e14;
+  background-color: #facc15;     /* ⭐ YELLOW */
   transition: width 0.3s ease;
 }
 
@@ -59,7 +62,7 @@
   background: #fff;
   border-left: 1px solid #ddd;
   transition: right 0.3s ease;
-  height: auto;        /* ⭐ FIX — menu जितना content उतना ही height */
+  height: auto;
   z-index: 999;
 }
 
@@ -68,9 +71,9 @@
 }
 
 .mobile-collapse .nav-link {
-  color: #333 !important;
+  color: #064e3b !important;     /* ⭐ SAME DARK GREEN FOR MOBILE */
   display: block;
-  padding: 12px 20px;  /* ⭐ Medium perfect size */
+  padding: 12px 20px;
   text-align: left;
   border-bottom: 1px solid #eee;
 }

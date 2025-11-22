@@ -2,39 +2,42 @@
 .contact-wrapper {
   width: 100%;
   display: block;
-  background: #ffffff;
+  background: #fff; /* section background */
   padding-top: 50px;
-  padding-bottom: 20px;   /* ⭐ small bottom spacing */
+  padding-bottom: 20px; 
   margin: 0;
 }
 
-/* CARD */
+/* CARD - slightly smaller */
 .contact-card {
-  width: 600px;
+  width: 650px;       
   margin: auto;
-  padding-top: 0px;
+  padding: 30px 20px; 
+  background: #064e3b; /* swapped to dark green */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 /* HEADING */
 .contact-title {
-  font-size: 32px;
+  font-size: 28px;    
   font-weight: 700;
   text-align: center;
   margin-bottom: 10px;
-  color: #000;
+  color: #facc15;  /* swapped to yellow */
 }
 
 .contact-subtitle {
-  font-size: 15px;
+  font-size: 14px;    
   text-align: center;
-  color: #555;
+  color: #facc15;  /* swapped to yellow */
   margin-bottom: 5px;
 }
 
 /* FORM CONTROL - CLEAN */
 .form-control {
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 20px;  
   background: none;
   padding: 0;
   border: none;
@@ -45,34 +48,34 @@
 .form-control input,
 .form-control textarea {
   width: 100%;
-  padding: 18px;
-  border: 2px solid #dcdcdc;
+  padding: 14px;       
+  border: 2px solid #facc15; /* swapped to yellow */
   border-radius: 10px;
   outline: none;
-  font-size: 16px;
-  background: #fff;
+  font-size: 15px;     
+  background: #ffffff; 
   transition: 0.3s ease;
 }
 
 /* SMALL TEXTAREA */
 .form-control textarea {
-  min-height: 90px !important;
+  min-height: 80px !important; 
 }
 
 /* FOCUS EFFECT */
 .form-control input:focus,
 .form-control textarea:focus {
-  border-color: #0d6efd;
+  border-color: #facc15; /* swapped to yellow */
 }
 
 /* LABEL SMALL */
 .form-control label {
   position: absolute;
   top: 50%;
-  left: 18px;
+  left: 14px;          
   transform: translateY(-50%);
-  font-size: 13.5px;
-  color: #80868b;
+  font-size: 13px;     
+  color: #facc15;  /* swapped to yellow */
   pointer-events: none;
   transition: 0.3s ease;
 }
@@ -82,12 +85,12 @@
   transform: translateY(-40px) scale(0.85);
   background: #fff;
   padding: 0 6px;
-  color: #0d6efd;
+  color: #064e3b; /* swapped to yellow */;
 }
 
 /* TEXTAREA LABEL */
 .textarea-control label {
-  top: 30px;
+  top: 28px;  
 }
 
 .textarea-control textarea:focus + label,
@@ -95,18 +98,18 @@
   transform: translateY(-40px) scale(0.85);
   background: #fff;
   padding: 0 6px;
-  color: #0d6efd;
+  color: #064e3b; /* swapped to yellow */
 }
 
 /* BUTTON FIX */
 .btn-submit {
-  width: 180px;
-  background: #28a745;
-  color: white;
+  width: 150px;         
+  background: #facc15;  /* swapped to yellow */
+  color: #064e3b;       /* swapped to dark green */
   border: none;
-  padding: 12px 0;
+  padding: 10px 0;      
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 16px;      
   display: block;
   margin: 10px auto 20px;
   font-weight: 600;
@@ -114,28 +117,28 @@
 }
 
 .btn-submit:hover {
-  background: #218838;
+  background: #e6b800;  /* slightly darker yellow */
 }
 
-/* ------------------- MOBILE FIX (⭐ IMPORTANT) ------------------- */
+/* ------------------- MOBILE FIX ------------------- */
 @media (max-width: 480px) {
 
   .contact-wrapper {
     padding: 10px;
-    padding-bottom: 20px;  /* ⭐ small bottom gap */
+    padding-bottom: 20px;  
   }
 
   .contact-card {
     width: 100% !important;
-    padding: 0 10px;
+    padding: 20px 10px;
   }
 
   .form-control input,
   .form-control textarea {
-    padding: 16px !important;
+    padding: 12px !important;
   }
 
   .btn-submit {
     width: 100% !important;
   }
-}
+}                     

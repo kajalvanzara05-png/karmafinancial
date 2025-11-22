@@ -40,7 +40,7 @@
   content: "";
   width: 60%;
   height: 4px;
-  background: #ff9d00;
+  background: #facc15 !important;   /* YELLOW */
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -48,11 +48,12 @@
   border-radius: 8px;
 }
 
-/* Orange Button */
+/* Yellow Button */
 .home-btn {
-  background: linear-gradient(135deg, #ff7a00, #ffae00) !important;
+  background: linear-gradient(135deg, #facc15, #f7b500) !important; 
   border: none !important;
-  color: white !important;
+  color: #064e3b !important;   /* DARK GREEN */
+  font-weight: 600;
 }
 
 /* Slider Buttons - Circular & Transparent */
@@ -60,13 +61,13 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
-  color: #fff; /* white arrow */
-  border: 2px solid #fff; /* optional border for visibility */
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid #fff;
   font-size: 32px;
-  width: 50px;  /* circular width */
-  height: 50px; /* circular height */
-  border-radius: 50%; /* fully circular */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,87 +84,28 @@
 .slider-btn.left { left: 25px; }
 .slider-btn.right { right: 25px; }
 
-/* Smooth Fade */
 .home {
   transition: background-image 1s ease-in-out !important;
 }
 
-/* ------------------------------------
-      ONLY RESPONSIVE FIX FOR HOME
--------------------------------------*/
-
-/* Mobile (max-width: 768px) */
+/* Responsive only (unchanged) */
 @media (max-width: 768px) {
-
-  /* Letter animation letters smaller */
-  .rs-letter {
-    font-size: 28px !important;
-  }
-
-  /* Underline title width reduce */
-  .underline-title::after {
-    width: 40% !important;
-    bottom: -7px !important;
-  }
-
-  /* Button responsive */
-  .home-btn {
-    padding: 8px 18px !important;
-    font-size: 14px !important;
-  }
-
-  /* Slider button size reduce */
-  .slider-btn {
-    font-size: 22px !important;
-    width: 40px;
-    height: 40px;
-  }
-
+  .rs-letter { font-size: 28px !important; }
+  .underline-title::after { width: 40% !important; bottom: -7px !important; }
+  .home-btn { padding: 8px 18px !important; font-size: 14px !important; }
+  .slider-btn { font-size: 22px !important; width: 40px; height: 40px; }
   .slider-btn.left { left: 12px !important; }
   .slider-btn.right { right: 12px !important; }
-
-  /* Background smooth */
-  .home {
-    background-size: cover !important;
-    background-position: center !important;
-  }
 }
 
-
-/* Very Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
-
-  .rs-letter {
-    font-size: 22px !important;
-  }
-
-  .underline-title::after {
-    width: 35% !important;
-  }
-
-  .slider-btn {
-    font-size: 18px !important;
-    width: 35px;
-    height: 35px;
-  }
-
-  .home-btn {
-    font-size: 13px !important;
-    padding: 7px 15px !important;
-  }
+  .rs-letter { font-size: 22px !important; }
+  .underline-title::after { width: 35% !important; }
+  .slider-btn { font-size: 18px !important; width: 35px; height: 35px; }
+  .home-btn { font-size: 13px !important; padding: 7px 15px !important; }
 }
 
-
-/* Tablet (768px – 992px) */
 @media (min-width: 768px) and (max-width: 992px) {
-
-  .rs-letter {
-    font-size: 36px !important;
-  }
-
-  .slider-btn {
-    font-size: 28px !important;
-    width: 45px;
-    height: 45px;
-  }
+  .rs-letter { font-size: 36px !important; }
+  .slider-btn { font-size: 28px !important; width: 45px; height: 45px; }
 }
