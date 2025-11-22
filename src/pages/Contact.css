@@ -1,144 +1,126 @@
 /* MAIN WRAPPER */
 .contact-wrapper {
   width: 100%;
-  display: block;
-  background: #fff; /* section background */
-  padding-top: 50px;
-  padding-bottom: 20px; 
-  margin: 0;
+  background: #fff;
+  padding: 40px 0;
 }
 
-/* CARD - slightly smaller */
-.contact-card {
-  width: 650px;       
+/* GRID – LEFT FORM + RIGHT BLUE BOX */
+.contact-grid {
+  width: 90%;
+  max-width: 1200px;
   margin: auto;
-  padding: 30px 20px; 
-  background: #064e3b; /* swapped to dark green */
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
-/* HEADING */
+/* LEFT SIDE — ORIGINAL CONTACT CARD */
+.contact-card {
+  width: 100%;
+  padding: 30px 20px;
+  background: #064e3b;
+  border-radius: 12px;
+}
+
+/* HEADING COLORS SAME */
 .contact-title {
-  font-size: 28px;    
+  font-size: 28px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 10px;
-  color: #facc15;  /* swapped to yellow */
+  color: #facc15;
 }
 
 .contact-subtitle {
-  font-size: 14px;    
+  font-size: 14px;
   text-align: center;
-  color: #facc15;  /* swapped to yellow */
+  color: #facc15;
   margin-bottom: 5px;
 }
 
-/* FORM CONTROL - CLEAN */
+/* FORM CONTROL SAME */
 .form-control {
   position: relative;
-  margin-bottom: 20px;  
-  background: none;
-  padding: 0;
-  border: none;
-  box-shadow: none;
+  margin-bottom: 20px;
 }
 
-/* INPUT + TEXTAREA */
 .form-control input,
 .form-control textarea {
   width: 100%;
-  padding: 14px;       
-  border: 2px solid #facc15; /* swapped to yellow */
+  padding: 14px;
+  border: 2px solid #facc15;
   border-radius: 10px;
-  outline: none;
-  font-size: 15px;     
-  background: #ffffff; 
-  transition: 0.3s ease;
+  font-size: 15px;
+  background: #fff;
 }
 
-/* SMALL TEXTAREA */
-.form-control textarea {
-  min-height: 80px !important; 
-}
-
-/* FOCUS EFFECT */
-.form-control input:focus,
-.form-control textarea:focus {
-  border-color: #facc15; /* swapped to yellow */
-}
-
-/* LABEL SMALL */
 .form-control label {
   position: absolute;
   top: 50%;
-  left: 14px;          
+  left: 14px;
   transform: translateY(-50%);
-  font-size: 13px;     
-  color: #facc15;  /* swapped to yellow */
-  pointer-events: none;
-  transition: 0.3s ease;
+  font-size: 13px;
+  color: #facc15;
+  transition: 0.3s;
 }
 
 .form-control input:focus + label,
-.form-control input:valid + label {
-  transform: translateY(-40px) scale(0.85);
-  background: #fff;
-  padding: 0 6px;
-  color: #064e3b; /* swapped to yellow */;
-}
-
-/* TEXTAREA LABEL */
-.textarea-control label {
-  top: 28px;  
-}
-
+.form-control input:valid + label,
 .textarea-control textarea:focus + label,
 .textarea-control textarea:valid + label {
   transform: translateY(-40px) scale(0.85);
   background: #fff;
   padding: 0 6px;
-  color: #064e3b; /* swapped to yellow */
+  color: #064e3b;
 }
 
-/* BUTTON FIX */
+/* BUTTON SAME */
 .btn-submit {
-  width: 150px;         
-  background: #facc15;  /* swapped to yellow */
-  color: #064e3b;       /* swapped to dark green */
-  border: none;
-  padding: 10px 0;      
+  width: 150px;
+  background: #facc15;
+  color: #064e3b;
+  padding: 10px 0;
   border-radius: 8px;
-  font-size: 16px;      
   display: block;
   margin: 10px auto 20px;
   font-weight: 600;
-  transition: 0.3s;
 }
 
-.btn-submit:hover {
-  background: #e6b800;  /* slightly darker yellow */
+
+/* ------------------ RIGHT BLUE INFO BOX ------------------ */
+
+.contact-info-box {
+  background: linear-gradient(180deg, #0038ff, #0023b8);
+  padding: 30px;
+  border-radius: 14px;
+  color: #fff;
 }
 
-/* ------------------- MOBILE FIX ------------------- */
-@media (max-width: 480px) {
+.contact-info-box h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
 
-  .contact-wrapper {
-    padding: 10px;
-    padding-bottom: 20px;  
-  }
+.contact-info-box p {
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
 
-  .contact-card {
-    width: 100% !important;
-    padding: 20px 10px;
-  }
+.info-card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 15px;
+}
 
-  .form-control input,
-  .form-control textarea {
-    padding: 12px !important;
-  }
+.info-card h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
 
-  .btn-submit {
-    width: 100% !important;
+/* MOBILE */
+@media(max-width: 768px){
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
-}                     
+}

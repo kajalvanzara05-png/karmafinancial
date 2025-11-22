@@ -1,4 +1,3 @@
-// Contact.jsx
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Contact.css";
@@ -48,76 +47,109 @@ const Contact = () => {
 
   return (
     <div className="contact-wrapper">
-      <div className="contact-card">
 
-        <h2 className="contact-title">Contact Us</h2>
-        <p className="contact-subtitle">
-          Whether you have questions or need assistance — we’re here to help.
-        </p>
+      {/* ⬇ GRID SYSTEM – LEFT FORM + RIGHT BLUE BOX */}
+      <div className="contact-grid">
 
-        <form onSubmit={handleSubmit}>
-          {/* FULL NAME */}
-          <div className="form-control">
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              required
-              onChange={handleChange}
-              className={errors.name ? "is-invalid" : ""}
-            />
-            <label>Full Name</label>
-            {errors.name && <div className="invalid-feedback d-block">{errors.name}</div>}
+        {/* LEFT SIDE – YOUR ORIGINAL FORM (NO CHANGES) */}
+        <div className="contact-card">
+          <h2 className="contact-title">Contact Us</h2>
+          <p className="contact-subtitle">
+            Whether you have questions or need assistance — we’re here to help.
+          </p>
+
+          <form onSubmit={handleSubmit}>
+            <div className="form-control">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                required
+                onChange={handleChange}
+                className={errors.name ? "is-invalid" : ""}
+              />
+              <label>Full Name</label>
+              {errors.name && <div className="invalid-feedback d-block">{errors.name}</div>}
+            </div>
+
+            <div className="form-control">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                required
+                onChange={handleChange}
+                className={errors.email ? "is-invalid" : ""}
+              />
+              <label>Email Address</label>
+              {errors.email && <div className="invalid-feedback d-block">{errors.email}</div>}
+            </div>
+
+            <div className="form-control">
+              <input
+                type="text"
+                name="phone"
+                value={formData.phone}
+                required
+                onChange={handleChange}
+                className={errors.phone ? "is-invalid" : ""}
+              />
+              <label>Mobile Number</label>
+              {errors.phone && <div className="invalid-feedback d-block">{errors.phone}</div>}
+            </div>
+
+            <div className="form-control textarea-control">
+              <textarea
+                name="message"
+                value={formData.message}
+                required
+                rows="3"
+                onChange={handleChange}
+                className={errors.message ? "is-invalid" : ""}
+              ></textarea>
+              <label>Message</label>
+              {errors.message && (
+                <div className="invalid-feedback d-block">{errors.message}</div>
+              )}
+            </div>
+
+            <button type="submit" className="btn-submit">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        {/* ➡ RIGHT SIDE BLUE BOX (Image Style Section) */}
+        <div className="contact-info-box">
+          <h3>Ready to Connect?</h3>
+          <p>
+            Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia
+            deserunt mollit anim id est laborum.
+          </p>
+
+          <div className="info-card">
+            <h4>Visit Our Office</h4>
+            <p>156, 1st Floor, C tower, K10 Atlantis, Near Genda Circle, opp. Honest Restaurant, Vadodara, Gujarat 390007</p>
           </div>
 
-          {/* EMAIL */}
-          <div className="form-control">
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              required
-              onChange={handleChange}
-              className={errors.email ? "is-invalid" : ""}
-            />
-            <label>Email Address</label>
-            {errors.email && <div className="invalid-feedback d-block">{errors.email}</div>}
+          <div className="info-card">
+            <h4>Send Us a Message</h4>
+            <p>info@karmafinancial.in</p>
           </div>
 
-          {/* PHONE */}
-          <div className="form-control">
-            <input
-              type="text"
-              name="phone"
-              value={formData.phone}
-              required
-              onChange={handleChange}
-              className={errors.phone ? "is-invalid" : ""}
-            />
-            <label>Mobile Number</label>
-            {errors.phone && <div className="invalid-feedback d-block">{errors.phone}</div>}
+          <div className="info-card">
+            <h4>Call Us Directly</h4>
+            <p>+91 81600 72383</p>
+              <p>+91 74050 65241</p>
           </div>
 
-          {/* MESSAGE */}
-          <div className="form-control textarea-control">
-            <textarea
-              name="message"
-              value={formData.message}
-              required
-              rows="3"
-              onChange={handleChange}
-              className={errors.message ? "is-invalid" : ""}
-            ></textarea>
-            <label>Message</label>
-            {errors.message && (
-              <div className="invalid-feedback d-block">{errors.message}</div>
-            )}
+          <div className="info-card">
+            <h4>Business Hours</h4>
+            <p>Mon–Fri: 8AM–7PM<br/>Weekends: By Appointment</p>
           </div>
 
-          <button type="submit" className="btn-submit">
-            Send Message
-          </button>
-        </form>
+        </div>
+
       </div>
     </div>
   );
