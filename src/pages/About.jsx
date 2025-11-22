@@ -80,7 +80,11 @@ const About = () => {
             <div className="cta-box p-4 rounded scroll-animate slide-right">
               <h5>💬 Let’s Talk</h5>
               <p>Your wealth. Your goals. <strong>Our mission.</strong></p>
-              <button className="btn btn-outline-light w-100">
+             
+              <button
+               className="btn btn-outline-primary w-100"
+                onClick={() => (window.location.href = "/contact")}
+              >
                 📅 Book Your Free Consultation
               </button>
             </div>

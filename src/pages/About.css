@@ -4,8 +4,8 @@
   margin-top: 30px !important;
   margin-bottom: 0 !important;
   padding-bottom: 0;
-  background-color: #facc15; /* Warm light yellow */
-  color: #064e3b;            /* Dark green text */
+  background-color: rgb(214, 239, 255); /* Warm light yellow */
+  color: royalblue !important;            /* Dark green text */
 
   width: 100% !important;       /* full width */
   max-width: 100% !important;   /* remove any Bootstrap limits */
@@ -30,15 +30,14 @@ body {
 
 /* TOP HEADING */
 .about-subtitle {
-  color: #064e3b; /* Dark green */
+  color:royalblue; /* Dark green */
   font-weight:1000;
-  font-height:50;
   font-size: 50px;
 }
 
 .about-heading {
   font-weight: 700;
-  color: #064e3b;  /* Dark green for heading */
+  color: darkblue;  /* Dark green for heading */
   position: relative;
   display: inline-block;
 }
@@ -48,7 +47,7 @@ body {
   position: absolute;
   width: 50%;
   height: 4px;
-  background: #064e3b; /* Dark green underline */
+  background: darkblue; /* Dark green underline */
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
@@ -58,13 +57,13 @@ body {
 .lead {
   color: #060606 !important; /* Dark green for paragraphs */
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 1.8rem;
 }
 
 /* PARAGRAPH */
 .about-para {
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.9;
   color: #060606;
   text-align: left !important;
   margin-bottom: 18px;
@@ -88,7 +87,7 @@ body {
 
 /* WHY CHOOSE */
 .choose-title {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #060606; /* Dark green */
   text-align: left;
@@ -113,12 +112,17 @@ body {
 
 /* CTA BOX - KEEP SAME */
 .cta-box {
-  background: #064e3b !important;
-  color: white;
+  background: #fff !important;
+  color: #060606;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 6px 25px rgba(0,0,0,0.2);
   margin-top: -40px;
+  width: 400px;
+}
+.btn{
+  background-color:royalblue;
+  color:#fff;
 }
 
 /* ---------------- SCROLL ANIMATION ---------------- */

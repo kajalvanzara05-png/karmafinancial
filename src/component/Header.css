@@ -4,9 +4,12 @@
   backdrop-filter: blur(8px);
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 70px;
   top: 0;
   z-index: 1000;
+}
+.nav-item{
+  font-weight: 500;
 }
 
 /* Navbar center vertically */
@@ -30,7 +33,7 @@
 .nav-link {
   position: relative;
   display: inline-block;
-  color: #064e3b !important;     /* ⭐ DARK GREEN */
+  color: rgb(214, 239, 255) !important;     /* ⭐ DARK GREEN */
   font-weight: 500;
   text-decoration: none;
   padding-bottom: 3px;
@@ -45,7 +48,7 @@
   bottom: 0;
   width: 0%;
   height: 2px;
-  background-color: #facc15;     /* ⭐ YELLOW */
+  background-color: royalblue;    /* ⭐ YELLOW */
   transition: width 0.3s ease;
 }
 
@@ -71,7 +74,7 @@
 }
 
 .mobile-collapse .nav-link {
-  color: #064e3b !important;     /* ⭐ SAME DARK GREEN FOR MOBILE */
+  color: royalblue !important;     /* ⭐ SAME DARK GREEN FOR MOBILE */
   display: block;
   padding: 12px 20px;
   text-align: left;

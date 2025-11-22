@@ -13,17 +13,17 @@ function Blog() {
 
   return (
     <section className="blog-section">
-      <h3 className="blog-title text-dark">Latest Blogs</h3>
-      <div className="blog-grid">
+      <h3 className="blog-title ">Latest Blogs</h3>
+      <div className="blog-grid ">
         {sortedBlogData.map((blog) => (
           <div
             key={blog.id}
             className="blog-card"
             onClick={() => navigate(blog.detailLink)}
           >
-            <div className="img-box">
+            <div className="img-box ">
               <img src={blog.image} alt={blog.title} />
-              <div className="overlay"></div>
+              <div className="overlay "></div>
             </div>
             <div className="card-body">
               <p className="blog-date">{blog.date}</p>

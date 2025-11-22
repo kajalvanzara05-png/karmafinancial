@@ -30,7 +30,7 @@ export default function BlogGrowwMultibagger() {
 
       {/* Company Overview */}
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-3">Company Overview</h2>
+        <h2 className="text-xl font-semibold">Company Overview</h2>
         <ul>
           <li></li>
            <p>
@@ -63,7 +63,7 @@ export default function BlogGrowwMultibagger() {
 
       {/* Financials */}
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-3">📊 Key Financials & Metrics</h2>
+        <h2 className="text-xl font-semibold ">📊 Key Financials & Metrics</h2>
 
         <ul className="list-disc ml-5">
           <li>
@@ -88,17 +88,17 @@ export default function BlogGrowwMultibagger() {
 
       {/* Why Multibagger */}
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-3">✅ Why It Could Be a Multibagger
+        <h2 className="text-xl font-semibold ">✅ Why It Could Be a Multibagger
         </h2>
         <ol>
-          <li><h4 className="font-semibold mt-2">Massive Digital Investing Tailwind</h4></li>
-          <p>
+          <li><p className="font-semibold ">Massive Digital Investing Tailwind</p></li>
+          
             <ul>
               <li>  Groww is riding India’s retail investing boom. More people entering capital markets could mean huge customer growth.</li>
               <li> As of its IPO DRHP, they are scaling fast in user base and transactions.<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.indiainfoline.com/news/ipo/billionbrains-garage-ventures-limited-groww-ipo/?utm_source=chatgpt.com">India Infoline</a></li>
             </ul>
-          </p>
-          <li> <h4 className="font-semibold mt-3">Strong Monetization & Product Diversification</h4></li>
+          
+          <li> <p className="font-semibold ">Strong Monetization & Product Diversification</p></li>
 
           <p>
             <ul><li>
@@ -106,7 +106,7 @@ export default function BlogGrowwMultibagger() {
               <li>More products means more “share of wallet” per user, driving higher profitability.</li></ul>
 
           </p>
-          <li><h4 className="font-semibold mt-3">Efficient Use of Funds</h4></li>
+          <li><p className="font-semibold mt-3">Efficient Use of Funds</p></li>
 
           <p>
             <ul>
@@ -117,7 +117,7 @@ export default function BlogGrowwMultibagger() {
 
           </p>
 
-          <li><h4 className="font-semibold mt-3">Strong Scale Advantage + User Base</h4></li>
+          <li><p className="font-semibold mt-3">Strong Scale Advantage + User Base</p></li>
           <p>
             <ul>
               <li> Groww has strong brand dominance in retail investing.<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.arihantcapital.com/company-information/company-information/77966?utm_source=chatgpt.com">Arihant Capital</a></li>
@@ -126,7 +126,7 @@ export default function BlogGrowwMultibagger() {
 
           </p>
 
-          <li><h4 className="font-semibold mt-3">Backed by Institutional Investors</h4></li>
+          <li><p className="font-semibold mt-3">Backed by Institutional Investors</p></li>
           <p>
             <ul>
               <li>Before IPO, Groww/Billionbrains had backing from prominent investors, which is a confidence signal. <a target="_blank" rel="noopener noreferrer nofollow" href="https://tradebrains.in/billionbrains-garage-ventures-ipo-from-gmp-and-issue-details-to-financials-heres-what-you-need-to-know/?utm_source=chatgpt.com">Trade Brains</a></li>
@@ -142,7 +142,7 @@ export default function BlogGrowwMultibagger() {
 
       {/* Risks */}
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-3">⚠️ Key Risks & Challenges</h2>
+        <h2 className="text-xl font-semibold">⚠️ Key Risks & Challenges</h2>
 
         <h2 className="font-semibold mt-2">High Valuation</h2>
         <p>With a P/E of ~50×, the IPO valuation is aggressive. <a target="_blank" rel="noopener noreferrer nofollow" href="http://screener.in">screener.in</a></p>
@@ -182,7 +182,7 @@ export default function BlogGrowwMultibagger() {
 
       {/* My View */}
       <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-3">🧭 My View: Is It a Potential Multibagger?</h2>
+        <h2 className="text-xl font-semibold ">🧭 My View: Is It a Potential Multibagger?</h2>
 
         <p>
           <strong>Yes — for the long term:</strong> If Groww’s management executes its IPO plans well, scales its MTF, credit, and broking business,

@@ -8,34 +8,24 @@ import { motion } from 'framer-motion';
 const Partners = () => {
   const logos = [TATA_AIA, POLICY_BAZAAR, ANGEL_ONE, IIFL];
 
-  const fadeUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-  };
-
+ 
   return (
-    <motion.div
-      className="container py-5 text-center partners-bg"
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
-    >
+    <div  className="container py-5 text-center partners-bg">
+    
         
-        <h1 className="mb-3 text-white underline-title">
+        <h1 className="mb-3 text-Primary underline-title">
           🤝 Join the Karma Financial Network 🤝</h1>
 
       <p className="lead text-white">
         Be part of a growing legacy of financial empowerment.
       </p>
 
-      <p className="lead mb-4 text-white">
+      <p className="lead mb-4 text-dark">
         Start your journey with Karma Financial and help others grow their wealth confidently.
       </p>
-
-      <h2 className="partner">Our Trusted Partners</h2>
-
-      {/* Slider */}
+      <div className='box'>
+        <h2 className="partner">Our Trusted Partners</h2>
+         {/* Slider */}
       <div className="partner-slider-wrapper overflow-hidden">
         <div className="partner-slider d-flex align-items-center">
           {logos.concat(logos).map((logo, idx) => (
@@ -47,7 +37,12 @@ const Partners = () => {
                 idx % logos.length === 1 || idx % logos.length === 2 ? "small-logo" : ""
               }`}
             />
-          ))}
+              ))}
+      </div>
+      
+
+     
+        
         </div>
       </div>
 
@@ -60,7 +55,7 @@ const Partners = () => {
       >
         📩 Start Investment
       </a>
-    </motion.div>
+    </div>
   );
 };
 

@@ -114,7 +114,7 @@ function Home() {
           {letters.length > 0 && (
             <>
               <p
-                className="fade-in lead mx-auto mb-4"
+                className="fade-in mx-auto mb-4"
                 style={{ maxWidth: "700px", color: "#e0e0e0" }}
               >
                 We help you grow your wealth through smart financial planning,

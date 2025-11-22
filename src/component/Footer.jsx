@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { 
-  FaYoutube, 
-  FaWhatsapp, 
-  FaInstagram, 
-  FaMapMarkerAlt, 
-  FaPhoneAlt, 
-  FaEnvelope 
+import {
+  FaYoutube,
+  FaWhatsapp,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope
 } from "react-icons/fa";
 
 import logo from "../assets/logo.png";
@@ -35,16 +35,16 @@ const Footer = () => {
               alt="Karma Financial Solutions Logo"
               className="img-fluid mb-3"
               style={{ maxWidth: "180px" }}
-              onError={(e) => { 
-                e.currentTarget.onerror = null; 
-                e.currentTarget.src = "/assets/logo.png"; 
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = "/assets/logo.png";
               }}
             />
             <p>
-              At Karma Financial Solutions, we deliver insightful market research and strategic 
+              At Karma Financial Solutions, we deliver insightful market research and strategic
               financial guidance to help you make confident, data-driven decisions.
               <br /><br />
-              We follow strict regulatory standards and prioritize transparency, integrity, and 
+              We follow strict regulatory standards and prioritize transparency, integrity, and
               personalized service—so you always receive support you can trust.
             </p>
           </div>
@@ -72,19 +72,38 @@ const Footer = () => {
           {/* Social Media */}
           <div className="col-12 col-sm-12 col-md-3 mb-4">
             <h5>Follow Us</h5>
-            <div className="d-flex gap-4">
-              <FaInstagram
-                className={`icon fs-3 insta ${activeIcon === "insta" ? "active" : ""}`}
-                onClick={() => handleClickIcon("insta")}
-              />
-              <FaYoutube
-                className={`icon fs-3 youtube ${activeIcon === "youtube" ? "active" : ""}`}
-                onClick={() => handleClickIcon("youtube")}
-              />
-              <FaWhatsapp
-                className={`icon fs-3 whatsapp ${activeIcon === "whatsapp" ? "active" : ""}`}
-                onClick={() => handleClickIcon("whatsapp")}
-              />
+            <div className="d-flex gap-4 ">
+              <a
+                href="https://www.instagram.com/karmfinancial?igsh=MXRiejJqd3VzMWt0bQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram
+                  className={`icon fs-3 insta ${activeIcon === "insta" ? "active" : ""}`}
+                  onClick={() => handleClickIcon("insta")}
+                />
+              </a>
+
+              <a href="https://youtube.com/@stockmovein?si=2dA8V_h7mxcPzds6"
+               target="_blank" 
+              rel="noopener noreferrer">
+                <FaYoutube
+                  className={`icon fs-3 youtube ${activeIcon === "youtube" ? "active" : ""}`}
+                  onClick={() => handleClickIcon("youtube")}
+                />
+              </a>
+
+              <a
+                href="https://wa.me/91xxxxxxxxxx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp
+                  className={`icon fs-3 whatsapp ${activeIcon === "whatsapp" ? "active" : ""}`}
+                  onClick={() => handleClickIcon("whatsapp")}
+                />
+              </a>
+
             </div>
           </div>
 
@@ -93,10 +112,10 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="text-center border-top pt-3 mt-3">
           <p className="mb-0">
-            © {new Date().getFullYear()} Karma Financial Solutions | Made with 🫶🏻 by  
-            <a 
-              href="https://techstrota.com/" 
-              target="_blank" 
+            © {new Date().getFullYear()} Karma Financial Solutions | Made with 🫶🏻 by
+            <a
+              href="https://techstrota.com/"
+              target="_blank"
               rel="noopener noreferrer"
               className={`techstrota-link ms-1 ${techActive ? "active" : ""}`}
               onClick={handleClickTech}

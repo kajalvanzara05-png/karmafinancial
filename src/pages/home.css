@@ -40,7 +40,7 @@
   content: "";
   width: 60%;
   height: 4px;
-  background: #facc15 !important;   /* YELLOW */
+  background:royalblue !important;   /* YELLOW */
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -50,9 +50,9 @@
 
 /* Yellow Button */
 .home-btn {
-  background: linear-gradient(135deg, #facc15, #f7b500) !important; 
+  background: linear-gradient(135deg, rgb(214, 239, 255),royalblue) !important; 
   border: none !important;
-  color: #064e3b !important;   /* DARK GREEN */
+  color: royalblue !important;   /* DARK GREEN */
   font-weight: 600;
 }
 

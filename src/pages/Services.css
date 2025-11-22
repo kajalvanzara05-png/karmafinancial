@@ -5,7 +5,9 @@
   font-family: "Poppins", sans-serif;
   background-color: #f5f8fa;
 }
-
+.title{
+  color: royalblue !important;
+}
 /* Heading */
 .services h3 {
   font-size: 2rem;
@@ -16,13 +18,13 @@
   display: inline-block;
 }
 
-/* Yellow underline */
+/*  underline */
 .services h3::after {
   content: "";
   position: absolute;
   width: 50%;
   height: 3px;
-  background: #facc15;
+  background: royalblue;
   bottom: -6px;
   left: 50%;
   transform: translateX(-50%);
@@ -41,8 +43,8 @@
 
 /* CARD - Modern Premium Style */
 .service-card {
-  background: #FFFBEA; 
-  border: 2px solid  #facc15; 
+  background: #fff; 
+  border: 2px solid royalblue ; 
   width: 100%;
   max-width: 200px;   
   height: 200px;
@@ -62,7 +64,7 @@
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  background: #facc15; 
+  background:  rgb(214, 239, 255); 
 }
 
 /* Circular Icon Box */
@@ -88,7 +90,7 @@
 .service-card h4 {
   font-size: 1.05rem;
   font-weight: 600;
-  color: #064e3b; /* DARK GREEN */
+  color:navy; /* DARK GREEN */
   text-align: center;
   margin: 0;
 }

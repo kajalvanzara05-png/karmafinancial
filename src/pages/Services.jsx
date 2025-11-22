@@ -18,7 +18,7 @@ function Services() {
 
   return (
     <section className="services">
-      <h3>Our Core Services</h3>
+      <h3 className="title">Our Core Services</h3>
 
       <div className="service-grid">
         {items.map((item, index) => (

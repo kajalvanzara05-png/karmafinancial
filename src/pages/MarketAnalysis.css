@@ -2,7 +2,7 @@
 .container.py-5 {
   padding-top: 20px;
   padding-bottom: 60px;
-  background-color:  #facc15; /* warm light yellow */
+  background-color:rgb(214, 239, 255); /* warm light yellow */
   text-align: center;
   font-family: "Poppins", sans-serif;
 
@@ -17,7 +17,7 @@
 
 /* Heading with underline */
 .mb-3 {
-  color: #064e3b;        /* dark green text */
+  color: royalblue !important;        /* dark green text */
   font-weight: bold;
   font-size: xx-large;
   position: relative;    /* required for underline positioning */
@@ -31,7 +31,7 @@
   position: absolute;
   width: 50%;            /* underline width */
   height: 4px;           /* underline thickness */
-  background: #064e3b;   /* dark green underline */
+  background: royalblue;   /* dark green underline */
   bottom: -6px;           /* spacing below text */
   left: 50%;
   transform: translateX(-50%);
@@ -39,10 +39,10 @@
 }
 
 /* Paragraph text */
-.lead {
-  color: #064e3b;        /* dark green for consistency */
+.leads{
+  color: #060606 !important;        /* dark green for consistency */
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   line-height: 1.7;
   margin-bottom: 20px;
   text-align: center;
