@@ -13,7 +13,7 @@ function Blog() {
 
   return (
     <section className="blog-section  ">
-      <h3 className="blog-title text-primary">Latest Blogs</h3>
+      <h3 className="blog-title ">Latest Blogs</h3>
       <div className="blog-grid ">
         {sortedBlogData.map((blog) => (
           <div

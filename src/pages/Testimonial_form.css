@@ -1,76 +1,87 @@
 .review-form {
-  margin-top: 30px;
-  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: royalblue; /* yellow background */
-  border-radius: 12px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  color:navy; /* dark green text */
+  background: rgb(184, 230, 248);
+  border-radius: 12px ;
+  box-shadow: 0 5px 15px navy;
+  
 }
 
 .review-form h3 {
+  text-align: center;
   margin-bottom: 20px;
-  font-size: 1.5rem;
-  color:navy; /* dark green */
+  color: navy;
 }
 
-.review-form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+/* Floating label wrapper */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.review-form input,
-.review-form textarea {
-  width: 90%;
-  max-width: 500px;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
+/* Inputs and textarea */
+input, textarea {
+  width: 100%;
+  padding: 18px 12px 6px 12px; /* top padding more for label inside */
+  font-size: 16px;
+  border: 2px solid blue;
   border-radius: 8px;
-  font-size: 1rem;
-  color:navy; /* dark green text inside inputs */
+  outline: none;
+  background: transparent;
+  transition: 0.3s;
 }
 
-.review-form textarea {
-  resize: vertical;
-  min-height: 80px;
+input:focus, textarea:focus {
+  border-color: navy; /* highlight border on focus */
 }
 
+/* Labels inside input */
+.input-group label {
+  position: absolute;
+  top: 18px; /* matches top padding of input */
+  left: 12px;
+  color: #021d6f;
+  pointer-events: none;
+  transition: 0.3s;
+  background:  rgb(184, 230, 248);
+  padding: 0 4px;
+}
+
+/* Move label on focus or if input has value */
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  top: -6px;
+  left: 8px;
+  font-size: 12px;
+  color: darkblue;
+  background-color:rgb(184, 230, 248) ;
+}
+
+/* Rating */
 .rating-input {
   display: flex;
-  justify-content: center;
-  gap: 5px;
-  margin-bottom: 10px;
+  gap: 6px;
+  margin-bottom: 15px;
+  margin-left: 150px;
 }
 
+/* Button */
 .submit-btn {
-  padding: 10px 20px;
+  width: 50%;
+  padding: 12px;
+  border: none;
   border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.3s;
-  background-color: navy !important; /* dark green button */
-  color: white !important;             /* white text */
-  border: none !important;
-}
-
-.message {
-  margin: 15px auto;
-  padding: 10px 15px;
-  background-color: #d4edda; /* green for success */
+  background: linear-gradient(135deg, rgb(214, 239, 255), royalblue) !important;
   color: navy;
-  border: 1px solid #c3e6cb;
-  border-radius: 8px;
-  width: fit-content;
-  animation: fadeout 3s forwards;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-@keyframes fadeout {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
+.submit-btn:hover {
+  transform: scale(1.05);
 }
+
