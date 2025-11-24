@@ -53,10 +53,12 @@ const Footer = () => {
           <div className="col-6 col-sm-4 col-md-2 mb-4 text-light">
             <h5>Useful Links</h5>
             <ul className="list-unstyled footer-links">
-              <li><a href="/" className="footer-link">Home</a></li>
+              <li><a href="/" className="footer-link">  Home</a></li>
               <li><a href="/about" className="footer-link">About Us</a></li>
               <li><a href="/service" className="footer-link">Services</a></li>
               <li><a href="/contact" className="footer-link">Contact</a></li>
+               <li><a href="/blogs" className="footer-link">Blogs</a></li>
+             
             </ul>
           </div>
 
