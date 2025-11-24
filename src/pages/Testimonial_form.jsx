@@ -63,60 +63,42 @@ const Testimonial_form = () => {
 
   return (
     <div className="review-form">
-      <h3>{editing ? "✏️ Edit Review" : "📝 Add Review"}</h3>
+      <h3>{editing ? "✏️ Edit Review" : "💬 Add Review"}</h3>
 
       {message && <div className="message">{message}</div>}
 
       <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            placeholder=" "
-            onChange={handleChange}
-            required
-          />
-          <label>Your Name *</label>
-        </div>
-
-        <div className="input-group">
-          <input
-            type="text"
-            name="company"
-            value={formData.company}
-            placeholder=" "
-            onChange={handleChange}
-          />
-          <label>Company / Designation</label>
-        </div>
-
-        <div className="input-group">
-          <textarea
-            name="feedback"
-            value={formData.feedback}
-            placeholder=" "
-            onChange={handleChange}
-            required
-          />
-          <label>Write your feedback *</label>
-        </div>
-
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name *"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="company"
+          placeholder="Company / Designation"
+          value={formData.company}
+          onChange={handleChange}
+        />
+        <textarea
+          name="feedback"
+          placeholder="Write your feedback *"
+          value={formData.feedback}
+          onChange={handleChange}
+        />
         <div className="rating-input">
-      
-                    {[...Array(5)].map((_, i) => (
+          {[...Array(5)].map((_, i) => (
             <FaStar
               key={i}
               size={22}
-              color={i < formData.rating ? "#f4b400" : "#fff"}
+              color={i < formData.rating ? "#f4b400" : "#ccc"}
               onClick={() => handleRating(i + 1)}
               style={{ cursor: "pointer" }}
             />
           ))}
-        
-  
         </div>
-
         <button type="submit" className="submit-btn">
           {editing ? "Update Review" : "Submit Review"}
         </button>

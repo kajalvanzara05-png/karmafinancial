@@ -1,87 +1,76 @@
 .review-form {
-  max-width: 500px;
-  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
   padding: 20px;
-  background: rgb(184, 230, 248);
-  border-radius: 12px ;
-  box-shadow: 0 5px 15px navy;
-  
+  background-color: royalblue; /* yellow background */
+  border-radius: 12px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  color:navy; /* dark green text */
 }
 
 .review-form h3 {
-  text-align: center;
   margin-bottom: 20px;
-  color: navy;
+  font-size: 1.5rem;
+  color:navy; /* dark green */
 }
 
-/* Floating label wrapper */
-.input-group {
-  position: relative;
-  margin-bottom: 20px;
+.review-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-/* Inputs and textarea */
-input, textarea {
-  width: 100%;
-  padding: 18px 12px 6px 12px; /* top padding more for label inside */
-  font-size: 16px;
-  border: 2px solid blue;
+.review-form input,
+.review-form textarea {
+  width: 90%;
+  max-width: 500px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  outline: none;
-  background: transparent;
-  transition: 0.3s;
+  font-size: 1rem;
+  color:navy; /* dark green text inside inputs */
 }
 
-input:focus, textarea:focus {
-  border-color: navy; /* highlight border on focus */
+.review-form textarea {
+  resize: vertical;
+  min-height: 80px;
 }
 
-/* Labels inside input */
-.input-group label {
-  position: absolute;
-  top: 18px; /* matches top padding of input */
-  left: 12px;
-  color: #021d6f;
-  pointer-events: none;
-  transition: 0.3s;
-  background:  rgb(184, 230, 248);
-  padding: 0 4px;
-}
-
-/* Move label on focus or if input has value */
-input:focus + label,
-textarea:focus + label,
-input:not(:placeholder-shown) + label,
-textarea:not(:placeholder-shown) + label {
-  top: -6px;
-  left: 8px;
-  font-size: 12px;
-  color: darkblue;
-  background-color:rgb(184, 230, 248) ;
-}
-
-/* Rating */
 .rating-input {
   display: flex;
-  gap: 6px;
-  margin-bottom: 15px;
-  margin-left: 150px;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-/* Button */
 .submit-btn {
-  width: 50%;
-  padding: 12px;
-  border: none;
+  padding: 10px 20px;
   border-radius: 8px;
-  background: linear-gradient(135deg, rgb(214, 239, 255), royalblue) !important;
-  color: navy;
-  font-weight: 600;
   cursor: pointer;
-  transition: transform 0.3s;
+  font-size: 1rem;
+  transition: 0.3s;
+  background-color: navy !important; /* dark green button */
+  color: white !important;             /* white text */
+  border: none !important;
 }
 
-.submit-btn:hover {
-  transform: scale(1.05);
+.message {
+  margin: 15px auto;
+  padding: 10px 15px;
+  background-color: #d4edda; /* green for success */
+  color: navy;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  width: fit-content;
+  animation: fadeout 3s forwards;
 }
 
+@keyframes fadeout {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
