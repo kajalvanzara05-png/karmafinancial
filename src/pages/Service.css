@@ -6,7 +6,7 @@
 .finance-title {
   font-size: 36px;
   margin-bottom: 40px;
-  color: #ff9d00;
+  color: royalblue;
   text-transform: uppercase;
 }
 
@@ -29,6 +29,11 @@
   transform: translateY(-4px);
 }
 
+/* ✔ CARD BORDER NAVY ON HOVER */
+.finance-card:hover .finance-body {
+  border: 2px solid navy !important;
+}
+
 .finance-body {
   background: white;
   width: 100%;
@@ -38,8 +43,8 @@
   box-shadow: 0 3px 12px rgba(0,0,0,0.12);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertical center */
-  align-items: center;     /* Horizontal center */
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 

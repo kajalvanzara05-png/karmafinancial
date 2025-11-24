@@ -1,3 +1,4 @@
+
 /* MAIN WRAPPER */
 .contact-wrapper {
   width: 100%;
@@ -5,7 +6,7 @@
   padding: 40px 0;
 }
 
-/* GRID – LEFT FORM + RIGHT BLUE BOX */
+/* GRID */
 .contact-grid {
   width: 90%;
   max-width: 1200px;
@@ -15,70 +16,99 @@
   gap: 25px;
 }
 
-/* LEFT SIDE — ORIGINAL CONTACT CARD */
+/* LEFT CARD */
 .contact-card {
   width: 100%;
   padding: 30px 20px;
-  background: #064e3b;
+  background: #fff;
   border-radius: 12px;
+  border: 2px solid navy;
 }
 
-/* HEADING COLORS SAME */
+/* HEADINGS */
 .contact-title {
   font-size: 28px;
   font-weight: 700;
   text-align: center;
-  color: #facc15;
+  color: navy;
 }
 
 .contact-subtitle {
   font-size: 14px;
   text-align: center;
-  color: #facc15;
+  color: navy;
   margin-bottom: 5px;
 }
 
-/* FORM CONTROL SAME */
+/* FORM CONTROL */
 .form-control {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* INPUT + TEXTAREA */
 .form-control input,
 .form-control textarea {
   width: 100%;
   padding: 14px;
-  border: 2px solid #facc15;
+  border: 2px solid navy !important;
   border-radius: 10px;
   font-size: 15px;
   background: #fff;
+  outline: none !important;        /* ⚡ SECOND OUTLINE REMOVE */
 }
 
+/* LABEL */
 .form-control label {
   position: absolute;
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
   font-size: 13px;
-  color: #facc15;
+  color: navy;
   transition: 0.3s;
+  pointer-events: none;
+  background: #fff;               /* ⚡ ORIGINAL WHITE BOX */
+  padding: 0 6px;                 /* ⚡ ORIGINAL BOX EFFECT */
 }
 
+/* FLOATING LABEL (UP) */
 .form-control input:focus + label,
 .form-control input:valid + label,
-.textarea-control textarea:focus + label,
-.textarea-control textarea:valid + label {
-  transform: translateY(-40px) scale(0.85);
-  background: #fff;
-  padding: 0 6px;
-  color: #064e3b;
+.form-control textarea:focus + label,
+.form-control textarea:valid + label {
+  top: -10px;
+  left: 10px;
+  font-size: 11px;
+  color: navy;
+  transform: none;
 }
+
+/* SUBMIT BUTTON */
+.btn-submit {
+  width: 150px;
+  background: linear-gradient(135deg, rgb(214, 239, 255), royalblue) !important;
+  color: navy;
+  padding: 10px 0;
+  border-radius: 8px;
+  display: block;
+  margin: 10px auto 20px;
+  font-weight: 600;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* BUTTON SAME */
 .btn-submit {
   width: 150px;
-  background: #facc15;
-  color: #064e3b;
+  background: linear-gradient(135deg, rgb(214, 239, 255), royalblue) !important;
+  color: navy;
   padding: 10px 0;
   border-radius: 8px;
   display: block;
@@ -87,35 +117,39 @@
 }
 
 
+
 /* ------------------ RIGHT BLUE INFO BOX ------------------ */
 
 .contact-info-box {
-  background: linear-gradient(180deg, #0038ff, #0023b8);
+  background: linear-gradient(180deg, rgb(214, 239, 255)) !important;
   padding: 30px;
   border-radius: 14px;
-  color: #fff;
+  color: navy;
+  border: 2px solid navy;        /* ✔ MAIN BORDER */
 }
 
 .contact-info-box h3 {
   font-size: 26px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .contact-info-box p {
   opacity: 0.9;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
+/* INNER CARDS */
 .info-card {
   background: rgba(255,255,255,0.12);
   border-radius: 14px;
   padding: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  border: 2px solid navy;        /* ✔ INNER CARD BORDER */
 }
 
 .info-card h4 {
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 /* MOBILE */
