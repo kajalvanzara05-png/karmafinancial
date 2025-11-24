@@ -7,7 +7,8 @@ export default function BlogWhatIsInvestment() {
 
   return (
     <article className="blog-article">
-
+        <header>
+ 
       <button className="back-btn" onClick={() => navigate("/blogs")}>
         ← Back to Blog
       </button>
@@ -18,6 +19,7 @@ export default function BlogWhatIsInvestment() {
         Published on <time dateTime="2025-11-03">11/3/2025</time>
       </p>
 
+      </header>
       <img
         src={b16}
         className="blog-detail-img"

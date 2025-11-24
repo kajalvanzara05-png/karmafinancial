@@ -7,12 +7,13 @@ export default function BlogGrowwMultibagger() {
 
   return (
     <article className="blog-article">
-
-      {/* Back Button */}
-      <button className="back-btn" onClick={() => navigate("/blogs")}>
-        ← Back to Blog
-      </button>
-
+        <header>
+              <button
+          onClick={() => navigate("/blogs")}
+          className="back-btn"
+        >
+          ← Back to Blog
+        </button>
       {/* Title */}
       <h1>🚀 Billionbrains Garage Ventures Ltd (Groww) — Can It Become a Multibagger?</h1>
 
@@ -21,6 +22,8 @@ export default function BlogGrowwMultibagger() {
         Published on <time dateTime="2025-11-17">11/17/2025</time>
       </p>
 
+        </header>
+  
       {/* Image */}
       <img
         src={b17}

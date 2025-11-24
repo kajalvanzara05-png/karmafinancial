@@ -4,6 +4,7 @@
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
+  
 }
 
 .blog-title {
@@ -64,10 +65,13 @@
   object-fit: cover;
   /* fit image inside container */
   transition: transform 0.5s ease;
+  
 }
 
 .blog-card:hover .img-box img {
   transform: scale(1.1);
+  
+  
 }
 
 /* Overlay on hover */
@@ -85,10 +89,12 @@
   justify-content: flex-end;
   padding: 10px;
   color: #fff;
+
 }
 
 .img-box:hover .overlay {
   opacity: 1;
+  
 }
 
 /* Card body */
@@ -103,18 +109,21 @@
   color: #393434;
   font-size: 0.85rem;
   margin-bottom: 8px;
+  font-weight:600;
 }
 
 .card-title {
   font-size: 1.1rem;
   margin-bottom: 8px;
   font-weight: 700;
+  color: darkblue;
+  
  
 }
 
 .card-text {
   font-size: 0.95rem;
-  color: #000000;
+  color: #060606;
   flex: 1;
 
 }

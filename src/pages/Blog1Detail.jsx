@@ -7,13 +7,15 @@ export default function Blog1Detail() {
 
   return (
     <article className="blog-article">
-
-      {/* Back Button */}
+        <header>
+            {/* Back Button */}
       <button className="back-btn" onClick={() => navigate(-1)}>← Back to Blog</button>
 
       {/* Blog Title */}
       <h1>🏢 KRBL Ltd — Can It Become a Multibagger?</h1>
       <p className="published-date">Published on 11/15/2025</p>
+        </header>
+    
       <img
         src={b1}
         alt="Ramsons Projects Ltd"
