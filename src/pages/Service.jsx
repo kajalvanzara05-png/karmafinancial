@@ -45,10 +45,19 @@ const Services = () => {
                 <h3 className="finance-text">{s.title}</h3>
                 <p className="finance-description">{s.description}</p>
               </div>
+              <p
+                  className="explore-link"
+                  onClick={() => navigate(`/services/${s.id}`)}
+                >
+                  Explore Services →
+                </p>
             </div>
+            
           </div>
+          
         ))}
       </div>
+      
     </div>
   );
 };

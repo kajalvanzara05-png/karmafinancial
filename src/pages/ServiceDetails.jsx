@@ -234,8 +234,8 @@ const ServiceDetails = () => {
         <h2>📈 Final Outcome</h2>
         <p>{service.result}</p>
       </div>
-<button className="back-btn" onClick={() => navigate(-1)}>
-        ← Back
+<button className="back-btn" onClick={() => navigate("/service")}>
+        ⬅ Back
       </button>
 
     </div>
