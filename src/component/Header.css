@@ -58,7 +58,7 @@
 
 /* ---------------- MOBILE MENU ---------------- */
 .mobile-collapse {
-  width: 230px;
+  width: 200px;
   position: fixed;
   top: 50px;
   right: -230px;
@@ -112,6 +112,6 @@
   }
 
   .navbar-toggler {
-    margin-right: 25px !important;
+    margin-right: 30px !important;
   }
 }

@@ -120,9 +120,9 @@ body {
   margin-top: -40px;
   width: 400px;
 }
-.btn{
-  background-color:royalblue;
-  color:#fff;
+.btn {
+  background-color: royalblue;
+  color: #fff;
 }
 
 /* ---------------- SCROLL ANIMATION ---------------- */
@@ -132,6 +132,7 @@ body {
   transition: all 0.9s ease-out;
 }
 
+/* Activate animations when class added */
 .scroll-animate.active {
   opacity: 1;
   transform: translate(0);
@@ -146,6 +147,12 @@ body {
 .slide-right.active,
 .slide-up.active {
   transform: translate(0);
+  opacity: 1;
+}
+
+/* Reset for repeated animations */
+.scroll-animate:not(.active) {
+  opacity: 0;
 }
 
 /* MOBILE FIX */
