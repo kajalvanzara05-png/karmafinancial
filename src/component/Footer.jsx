@@ -63,10 +63,10 @@ const Footer = () => {
           {/* Our Office */}
           <div className="col-12 col-sm-8 col-md-3 mb-4">
             <h5>Our Office</h5>
-            <p><FaMapMarkerAlt className="me-2 text-warning" />156, 1st Floor, C tower, K10 Atlantis, Near Genda Circle, opp. Honest Restaurant, Vadodara, Gujarat 390007</p>
-            <p><FaPhoneAlt className="me-2 text-warning" />+91 81600 72383</p>
-            <p><FaPhoneAlt className="me-2 text-warning" />+91 74050 65241</p>
-            <p><FaEnvelope className="me-2 text-warning" />info@karmafinancial.in</p>
+            <p><FaMapMarkerAlt className="me-2 text-primary" />156, 1st Floor, C tower, K10 Atlantis, Near Genda Circle, opp. Honest Restaurant, Vadodara, Gujarat 390007</p>
+            <p><FaPhoneAlt className="me-2 text-primary" />+91 81600 72383</p>
+            <p><FaPhoneAlt className="me-2 text-primary" />+91 74050 65241</p>
+            <p><FaEnvelope className="me-2 text-primary" />info@karmafinancial.in</p>
           </div>
 
           {/* Social Media */}
