@@ -16,6 +16,8 @@
   font-weight: 700;
   color: royalblue;
   margin-top: -30px;
+  text-align: center;
+ 
 }
 
 /* Headline */
@@ -68,7 +70,7 @@
 }
 
 .choose-title {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #12324b;
 }
 
@@ -95,7 +97,7 @@
   justify-content: center;
   align-items: center;
   background: #e6fbf0;
-  color: #198754;
+  color: navy;
   border-radius: 6px;
   font-weight: 700;
 }
@@ -135,7 +137,7 @@
   font-size: 1rem;
   line-height: 9.6;
   margin-bottom: -40px;
-  align-items: center !important;
+ 
 }
 
 .cta .btn {
