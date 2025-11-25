@@ -14,7 +14,6 @@ const BlogCardItem = ({ blog, onClick }) => {
         <img src={blog.image} className="card-img-top" alt={blog.title} />
         <div className="overlay">
           <h5>{blog.title}</h5>
-          <p>Read more →</p>
         </div>
       </div>
       <div className="card-body">

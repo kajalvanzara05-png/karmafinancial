@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import blogData from "../data/blogdata";
 import "../component/BlogCard"; // CSS file
+import "../pages/blog.css";
 
 function Blog() {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ function Blog() {
               <div className="overlay "></div>
             </div>
             <div className="card-body">
-              <p className="blog-date">{blog.date}</p>
+              <p className="blog-date">Published on{blog.date}</p>
               <h5 className="card-title">{blog.title}</h5>
               <p className="card-text">{blog.shortDesc}</p>
             </div>

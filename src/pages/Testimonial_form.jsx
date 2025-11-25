@@ -67,27 +67,45 @@ const Testimonial_form = () => {
 
       {message && <div className="message">{message}</div>}
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name *"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="company"
-          placeholder="Company / Designation"
-          value={formData.company}
-          onChange={handleChange}
-        />
-        <textarea
-          name="feedback"
-          placeholder="Write your feedback *"
-          value={formData.feedback}
-          onChange={handleChange}
-        />
+      <form onSubmit={handleSubmit} noValidate>
+        {/* Name */}
+        <div className="input-group">
+          <input
+            type="text"
+            name="name"
+            placeholder=" "       // <-- empty placeholder required
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <label>Your Name *</label>
+        </div>
+
+        {/* Company */}
+        <div className="input-group">
+          <input
+            type="text"
+            name="company"
+            placeholder=" "
+            value={formData.company}
+            onChange={handleChange}
+          />
+          <label>Company / Designation</label>
+        </div>
+
+        {/* Feedback */}
+        <div className="input-group">
+          <textarea
+            name="feedback"
+            placeholder=" "
+            value={formData.feedback}
+            onChange={handleChange}
+            required
+          />
+          <label>Write your feedback *</label>
+        </div>
+
+        {/* Rating */}
         <div className="rating-input">
           {[...Array(5)].map((_, i) => (
             <FaStar
@@ -99,6 +117,7 @@ const Testimonial_form = () => {
             />
           ))}
         </div>
+
         <button type="submit" className="submit-btn">
           {editing ? "Update Review" : "Submit Review"}
         </button>
