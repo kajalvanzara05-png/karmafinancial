@@ -78,7 +78,7 @@ const Testimonial_form = () => {
             onChange={handleChange}
             required
           />
-          <label>Your Name *</label>
+          <label>Your Name </label>
         </div>
 
         {/* Company */}
@@ -102,7 +102,7 @@ const Testimonial_form = () => {
             onChange={handleChange}
             required
           />
-          <label>Write your feedback *</label>
+          <label>Write your feedback </label>
         </div>
 
         {/* Rating */}

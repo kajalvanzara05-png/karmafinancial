@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "./About.css";
 import Contact from "./Contact";
+import myImage from "../assets/about.png";
 
 const About = () => {
   const [page, setPage] = useState("Home");
@@ -57,7 +58,7 @@ const About = () => {
             </figure>
 
             <div className="choose-section mt-3" aria-label="Why Choose Us">
-              <h3 className="choose-title">💡 Why Choose Us?</h3>
+              <h3 className="choose-title"><img src={myImage} alt="Contact" className="animated-image" /><p className="image-text">why choose us?</p></h3>
               <ul className="choose-list">
                 <li><span className="check">✓</span> Transparent, honest advice</li>
                 <li><span className="check">✓</span> Real-time data & insights</li>
