@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import blogData from "../data/blogdata";
-import "../component/BlogCard"; // CSS file
+import "../component/BlogCard"; 
 import "../pages/blog.css";
 
 function Blog() {

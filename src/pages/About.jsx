@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import "./About.css";
 import Contact from "./Contact";
-import myImage from "../assets/about.png";
 
 const About = () => {
   const [page, setPage] = useState("Home");
@@ -56,16 +55,30 @@ const About = () => {
                 className="about-img img-fluid"
               />
             </figure>
+          <div className="choose-section card p-3 shadow-sm mt-3">
+  <div className="row g-3 align-items-center">
+    {/* Left Image */}
+    <div className="col-md-4 text-center">
+      <img
+        src="/images/about.png"   // or import locally
+        alt="Why Choose Us"
+        className="img-fluid rounded choose-img"
+      />
+    </div>
 
-            <div className="choose-section mt-3" aria-label="Why Choose Us">
-              <h3 className="choose-title"><img src={myImage} alt="Contact" className="animated-image" /><p className="image-text">why choose us?</p></h3>
-              <ul className="choose-list">
-                <li><span className="check">✓</span> Transparent, honest advice</li>
-                <li><span className="check">✓</span> Real-time data & insights</li>
-                <li><span className="check">✓</span> Beginner to pro educational content</li>
-                <li><span className="check">✓</span> Trusted by hundreds of satisfied clients</li>
-              </ul>
-            </div>
+    {/* Right Content */}
+    <div className="col-md-8">
+      <h3 className="choose-title">💡 Why Choose Us?</h3>
+      <ul className="choose-list">
+        <li><span className="check">✓</span> Transparent, honest advice</li>
+        <li><span className="check">✓</span> Real-time data & insights</li>
+        <li><span className="check">✓</span> Beginner to pro educational content</li>
+        <li><span className="check">✓</span> Trusted by hundreds of satisfied clients</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
           </motion.div>
 
           <motion.div
