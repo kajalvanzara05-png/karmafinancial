@@ -1,99 +1,105 @@
-import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import "./About.css";
-import about from "../assets/about.jpg";
+import Contact from "./Contact";
 
 const About = () => {
+  const [page, setPage] = useState("Home");
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          } else {
-            entry.target.classList.remove("active"); // Remove class when element leaves viewport
-          }
-        });
-      },
-      { threshold: 0.2 }
+  const fadeDown = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const slideLeft = {
+    hidden: { opacity: 0, x: -80 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+
+  const slideRight = {
+    hidden: { opacity: 0, x: 80 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+
+  const renderPage = () => {
+    if (page === "Contact") return <Contact />;
+
+    return (
+      <section className="about-container container py-5">
+        <motion.div
+          className="headline text-center"
+          variants={fadeDown}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.4 }}
+        >
+          <div className="about-subtitle">🧾 About Us</div>
+          <h2 className="about-heading">Karma Financial Solutions</h2>
+          <p className="lead">
+            Helping You Grow & Protect Your Wealth With Confidence
+          </p>
+        </motion.div>
+
+        <div className="row about-row align-items-start mt-4">
+          <motion.div
+            className="col-lg-6 about-left"
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <figure className="about-figure">
+              <img
+                src="/images/about.jpg"
+                alt="About Us"
+                className="about-img img-fluid"
+              />
+            </figure>
+
+            <div className="choose-section mt-3" aria-label="Why Choose Us">
+              <h3 className="choose-title">💡 Why Choose Us?</h3>
+              <ul className="choose-list">
+                <li><span className="check">✓</span> Transparent, honest advice</li>
+                <li><span className="check">✓</span> Real-time data & insights</li>
+                <li><span className="check">✓</span> Beginner to pro educational content</li>
+                <li><span className="check">✓</span> Trusted by hundreds of satisfied clients</li>
+              </ul>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="col-lg-6 about-right"
+            variants={slideRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <p className="about-lead">
+              At Karma Financial Solutions, we believe that {" "}
+              <strong>financial freedom isn't just a goal—it's your right.</strong>
+              Whether you're just starting your investment journey or planning for long-term wealth, 
+              we're here to guide you every step of the way.
+            </p>
+
+            <p className="about-body">
+              With a passion for <strong>transparency, trust, and results, </strong>
+              we offer expert-backed services to meet your unique goals.
+            </p>
+
+            <div className="cta mt-4">
+              <div className="title">💬 Let’s Talk</div>
+              <p>Your wealth. Your goals. <strong>Our mission.</strong></p>
+              <button className="btn btn-primary" onClick={() => setPage("Contact")}>
+                📩 Book Your Free Consultation
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     );
+  };
 
-    const elements = document.querySelectorAll(".scroll-animate");
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div className="container about-wrapper py-0">
-
-      {/* TOP HEADING */}
-      <div className="text-center mb-4 mt-3 scroll-animate slide-up">
-        <h6 className="about-subtitle">About Us</h6>
-        <h2 className="about-heading">Karma Financial Solutions</h2>
-        <p className="lead">
-          Helping You Grow & Protect Your Wealth With Confidence
-        </p>
-      </div>
-
-      {/* IMAGE + CONTENT */}
-      <div className="row align-items-start mt-3">
-
-        {/* IMAGE */}
-        <div className="col-lg-4 d-flex justify-content-center about-img-col">
-          <div className="about-img-box scroll-animate slide-left">
-            <img src={about} alt="about" className="about-img" />
-          </div>
-        </div>
-
-        {/* TEXT SECTION */}
-        <div className="col-lg-4 mb-4 about-text-col">
-          <div className="about-text-box p-2 scroll-animate slide-up">
-            <p className="about-para"><br /><br />
-              At Karma Financial Solutions, we believe that financial freedom
-              isn't just a goal—it's your right. Whether you're just starting
-              your investment journey or planning for long-term wealth, we're
-              here to guide you every step of the way.
-            </p>
-            <br />
-            <p className="about-para">
-              With a passion for transparency, trust, and results, we offer
-              expert-backed services that match your personal financial goals.
-            </p>
-          </div>
-        </div>
-
-        {/* WHY CHOOSE + CTA */}
-        <div className="col-lg-4 mb-4">
-
-          <div className="choose-card p-4 rounded mb-4 scroll-animate slide-right">
-            <h5 className="choose-title">💡 Why Choose Us?</h5>
-            <ul className="choose-list mt-3">
-              <li>✔ Transparent, honest advice</li>
-              <li>✔ Real-time data & insights</li>
-              <li>✔ Beginner to pro educational content</li>
-              <li>✔ Trusted by hundreds of satisfied clients</li>
-            </ul>
-          </div>
-
-          <div className="cta-box p-4 rounded scroll-animate slide-right">
-            <h5>💬 Let’s Talk</h5>
-            <p>Your wealth. Your goals. <strong>Our mission.</strong></p>
-           
-            <button
-             className="btn btn-outline-primary w-100"
-              onClick={() => (window.location.href = "/contact")}
-            >
-              📅 Book Your Free Consultation
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  );
+  return renderPage();
 };
 
 export default About;
