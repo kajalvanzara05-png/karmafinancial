@@ -1,4 +1,4 @@
-/* ---------- MAIN CONTAINER ---------- */
+/*MAI CONTAINER*/
 .details-container {
   max-width: 900px;
   
@@ -7,13 +7,13 @@
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.7;
   color: #222;
-  background: rgb(214, 239, 255);   /* ✔ YOUR NEW BACKGROUND COLOR */
-  border-radius: 12px;              /* (optional: looks better, remove if not needed) */
+  background: rgb(214, 239, 255);   
+  border-radius: 12px;              
 }
 
-/* ---------- BACK BUTTON ---------- */
+/*BACK BUTTON*/
 .back-btn {
-  background: #eee;
+  background: #ffffff;
   border: none;
   padding: 10px 18px;
   font-size: 15px;
@@ -27,7 +27,7 @@
   background: #ddd;
 }
 
-/* ---------- TITLE ---------- */
+/*TITLE*/
 .details-title {
   font-size: 32px;
   font-weight: 700;
@@ -35,14 +35,14 @@
   color: #0a3d62;
 }
 
-/* ---------- INTRO PARAGRAPH ---------- */
+/*INTRO PARAGRAPH*/
 .details-intro {
   font-size: 18px;
   color: #333;
   margin-bottom: 25px;
 }
 
-/* ---------- SECTIONS ---------- */
+/*SECTION*/
 .details-section {
   margin: 28px 0;
   padding-bottom: 10px;
@@ -56,7 +56,7 @@
   margin-bottom: 12px;
 }
 
-/* ---------- LISTS ---------- */
+/*LISTS*/
 .details-section ul {
   padding-left: 22px;
 }
@@ -68,7 +68,7 @@
   color: #444;
 }
 
-/* ---------- CONTACT BUTTON ---------- */
+/*CONTACT BUTTON*/
 .contact-btn {
   margin-top: 20px;
   background: #0c2461;
@@ -85,7 +85,7 @@
   background: #1e3799;
 }
 
-/* ---------- RESPONSIVE ---------- */
+/*RESPONSIVE*/
 @media (max-width: 600px) {
   .details-container {
     padding: 15px;

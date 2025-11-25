@@ -28,8 +28,7 @@
 .finance-card:hover {
   transform: translateY(-4px);
 }
-
-/* ✔ CARD BORDER NAVY ON HOVER */
+/*CARD BORDER NAVI ON HOVER*/
 .finance-card:hover .finance-body {
   border: 2px solid navy !important;
 }
@@ -37,7 +36,7 @@
 .finance-body {
   background: white;
   width: 100%;
-  min-height: 180px;
+  height: 235px;            
   border-radius: 25px;
   border: 2px solid #e6e6e6;
   box-shadow: 0 3px 12px rgba(0,0,0,0.12);
@@ -48,6 +47,7 @@
   padding: 20px;
 }
 
+
 .finance-icon {
   width: 50px;
   height: 50px;
@@ -55,9 +55,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
   color: white;
   margin-bottom: 15px;
+  font-size: 32px !important;   
 }
 
 .finance-content {
@@ -77,6 +77,7 @@
   margin-top: 6px;
   line-height: 1.4;
 }
+
 .explore-link {
   margin-top: 10px;
   color: royalblue;
@@ -90,14 +91,18 @@
 .explore-link:hover {
   color: navy;
 }
-
-
-/* RESPONSIVE */
+/* RESPONSIVE*/
 @media (max-width: 992px) {
   .finance-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  @media (max-width: 600px) {
+  .finance-body {
+    height: 220px;
+  }
+}
+
 }
 
 @media (max-width: 600px) {
@@ -111,6 +116,6 @@
   }
 
   .finance-body {
-    min-height: 160px;
+    min-height: 200px;
   }
 }

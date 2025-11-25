@@ -1,5 +1,7 @@
+
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./ServiceDetails.css";
 
 const servicesData = {
@@ -186,58 +188,62 @@ const ServiceDetails = () => {
   const service = servicesData[id];
 
   if (!service) {
-    return <h2 style={{ textAlign: "center", color: "red" }}>Service Not Found</h2>;
+    return <h2 className="text-center text-danger">Service Not Found</h2>;
   }
 
   return (
-    <div className="details-container">
-      {/* Back Button */}
-      
+    <div className="details-container container">
 
       <h1 className="details-title">{service.title}</h1>
       <p className="details-intro">{service.intro}</p>
 
-      {service.features && (
-        <div className="details-section">
-          <h2>✨ Key Features</h2>
-          <ul>
-            {service.features.map((f, index) => (
-              <li key={index}>{f}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div className="row">
+        <div className="col-12">
+          {service.features && (
+            <div className="details-section">
+              <h2>✨ Key Features</h2>
+              <ul>
+                {service.features.map((f, index) => (
+                  <li key={index}>{f}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-      {service.process && (
-        <div className="details-section">
-          <h2>🛠 Our Process</h2>
-          <ul>
-            {service.process.map((p, index) => (
-              <li key={index}>{p}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+          {service.process && (
+            <div className="details-section">
+              <h2>🛠 Our Process</h2>
+              <ul>
+                {service.process.map((p, index) => (
+                  <li key={index}>{p}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-      {service.whoNeeds && (
-        <div className="details-section">
-          <h2>👤 Who Needs This?</h2>
-          <ul>
-            {service.whoNeeds.map((n, index) => (
-              <li key={index}>{n}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+          {service.whoNeeds && (
+            <div className="details-section">
+              <h2>👤 Who Needs This?</h2>
+              <ul>
+                {service.whoNeeds.map((n, index) => (
+                  <li key={index}>{n}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-      <div className="details-section">
-        <h2>📈 Final Outcome</h2>
-        <p>{service.result}</p>
+          <div className="details-section">
+            <h2>📈 Final Outcome</h2>
+            <p>{service.result}</p>
+          </div>
+        </div>
       </div>
-<button className="back-btn" onClick={() => navigate("/service")}>
-        ⬅ Back
-      </button>
 
+      <div className="text-center mt-4">
+        <button className="back-btn" onClick={() => navigate("/service")}>
+          ⬅ Back
+        </button>
+      </div>
     </div>
   );
 };

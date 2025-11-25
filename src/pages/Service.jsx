@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Service.css";
-
 
 import { 
   FaChartLine, FaWallet, FaLightbulb, FaFileAlt, FaRobot, 
@@ -26,38 +26,36 @@ const Services = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="finance-wrapper">
+    <div className="finance-wrapper container">
       <h1 className="finance-title">Our Services</h1>
 
-      <div className="finance-grid">
+      <div className="row">
         {services.map((s) => (
           <div
             key={s.id}
-            className="finance-card"
+            className="col-lg-4 col-md-6 col-sm-12 mb-4"
             onClick={() => navigate(`/services/${s.id}`)}
           >
-            {/* Full card with icon + text inside */}
-            <div className="finance-body">
-              <div className="finance-icon" style={{ background: s.color }}>
-                {s.icon}
-              </div>
-              <div className="finance-content">
-                <h3 className="finance-text">{s.title}</h3>
-                <p className="finance-description">{s.description}</p>
-              </div>
-              <p
+            <div className="finance-card">
+              <div className="finance-body">
+                <div className="finance-icon" style={{ background: s.color }}>
+                  {s.icon}
+                </div>
+                <div className="finance-content">
+                  <h3 className="finance-text">{s.title}</h3>
+                  <p className="finance-description">{s.description}</p>
+                </div>
+                <p
                   className="explore-link"
                   onClick={() => navigate(`/services/${s.id}`)}
                 >
                   Explore Services →
                 </p>
+              </div>
             </div>
-            
           </div>
-          
         ))}
       </div>
-      
     </div>
   );
 };

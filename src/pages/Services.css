@@ -1,4 +1,4 @@
-/* MAIN SECTION */
+/* MAIN SECTION*/
 .services {
   padding: 60px 20px;
   text-align: center;
@@ -8,7 +8,7 @@
 .title{
   color: royalblue !important;
 }
-/* Heading */
+/* HEADING*/
 .services h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -18,7 +18,7 @@
   display: inline-block;
 }
 
-/*  underline */
+/*UNDERLINE*/
 .services h3::after {
   content: "";
   position: absolute;
@@ -31,7 +31,7 @@
   border-radius: 4px;
 }
 
-/* Grid Layout */
+/*GRID LAYOUT*/
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -41,7 +41,7 @@
   margin: 0 auto;
 }
 
-/* CARD - Modern Premium Style */
+/*CARD-MODERM PRIMIUM STYLE*/
 .service-card {
   background: #fff; 
   border: 2px solid royalblue ; 
@@ -60,18 +60,18 @@
   cursor: pointer;
 }
 
-/* Hover Effect */
+/* HOVER EFFECT*/
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   background:  rgb(214, 239, 255); 
 }
 
-/* Circular Icon Box */
+/* CIRCULAR ICON BOX*/
 .icon-box {
   width: 80px; 
   height: 80px; 
-  border-radius: 50%; /* circular shape */
+  border-radius: 50%; 
   background: #ffffff; 
   display: flex;
   justify-content: center;
@@ -79,25 +79,23 @@
   margin: 0 auto;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+/*EMOJI ICON*/
 
-/* Emoji Icon */
 .emoji-icon {
   font-size: 40px; 
   line-height: 1;
 }
 
-/* Card Title */
+/*CARDE TITLE*/
 .service-card h4 {
   font-size: 1.05rem;
   font-weight: 600;
-  color:navy; /* DARK GREEN */
+  color:navy; 
   text-align: center;
   margin: 0;
 }
 
-/* -------------------------
-    Responsive adjustments
-------------------------- */
+/*RESPONSIVE ADJUSTMENTS*/
 @media (min-width: 768px) and (max-width: 992px) {
   .service-card {
     max-width: 180px;
