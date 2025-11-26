@@ -1,11 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 import blogData from "../data/blogdata";
 import "../component/BlogCard"; 
-import "../pages/blog.css";
+
+
 
 function Blog() {
-  const navigate = useNavigate();
+ 
 
   // Sort blogData by date (latest first)
   const sortedBlogData = blogData.sort(
@@ -17,11 +19,10 @@ function Blog() {
       <h3 className="blog-title ">Latest Blogs</h3>
       <div className="blog-grid ">
         {sortedBlogData.map((blog) => (
-          <div
-            key={blog.id}
-            className="blog-card "
-            onClick={() => navigate(blog.detailLink)}
-          >
+          <div>
+        <Link key={blog.id} to={blog.detailLink} className="blog-card">
+ 
+
             <div className="img-box ">
               <img src={blog.image} alt={blog.title} />
               <div className="overlay "></div>
@@ -31,7 +32,9 @@ function Blog() {
               <h5 className="card-title">{blog.title}</h5>
               <p className="card-text">{blog.shortDesc}</p>
             </div>
+            </Link>
           </div>
+
         ))}
       </div>
     </section>
