@@ -1,271 +1,128 @@
 /* =============================
-   BOOTSTRAP FRIENDLY ABOUT CSS
-   (Same design – Cleaner + Bootstrap structure)
+   ABOUT CONTAINER (CENTERED)
 ============================= */
-
 .about-container {
-  max-width: 1200px;
+  max-width: 1300px; /* width slightly increased */
   margin: 0 auto;
   padding: 56px 20px;
   color: #222;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  display: flex;
+  justify-content: center;
 }
 
-.financial-img {
-  width: 100%;
-  height: auto !important;
-  object-fit: contain !important;
-  object-position: center;
-  display: block;
-}
-
-.about-subtitle {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: royalblue;
-  margin-top: -30px;
-  text-align: center;
-}
-
-/* Headline */
-.headline {
-  text-align: center;
-  margin-bottom: 40px;
-  padding: 20px;
-  animation: fadeUp 1s ease-in-out;
-}
-
-.about-heading {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: #0f3b4a;
-}
-
-.lead {
-  color: #555;
-  font-size: 1.1rem;
-}
-
-/* Bootstrap Row Adjust */
+/* =============================
+       GRID LAYOUT (FIXED)
+============================= */
 .about-row {
-  row-gap: 50px;
+  width: 100%;
+  max-width: 1300px; /* wider layout */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px; /* reduced gap for balanced layout */
+  align-items: start;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-/* Left Column */
+/* =============================
+       LEFT COLUMN
+============================= */
 .about-left {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
+  width: 100%;
 }
 
-.image-container {
-  text-align: center;
-  margin-top: 20px;
+/* BIGGER IMAGE */
+.about-img {
+  display: block;
+  width: 100%;
+  max-width: 500px;   /* ⭐ INCREASED IMAGE WIDTH */
+  height: 300px;;
+  object-fit: cover;
 }
 
-.animated-image {
-  width: 120px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.image-text {
-  font-size: 20px;
-  color: navy;
-  font-weight: 900;
-}
-
-.about-figure img {
-  width: 400px;
-  height: 200px;
-  border-radius: 8px;
-  margin-top: -50px;
-}
-
-.animated-image {
-  animation: float 3s ease-in-out infinite;
-  width: 200px;
-}
-
-.about-figure {
-  margin-left: auto;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-/* Why Choose Us */
+/* =============================
+     WHY CHOOSE BOX
+============================= */
 .choose-section {
-  background: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-  margin-left: auto;
-  width: 500px;
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 10px;
+  max-width: 500px;  /* ⭐ WIDER WHY CHOOSE WIDTH */
+  width: 100%;
 }
-
-.choose-title {
-  font-size: 1.5rem;
-  color: #12324b;
-}
-
-.choose-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 10px;
-}
-
 .choose-list li {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #374151;
+  align-items:left;
+  gap: 10px;
+  color: #000;   /* ⭐ pure black */
   font-size: 1rem;
 }
 
-.check {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #e6fbf0;
-  color: navy;
-  border-radius: 6px;
-  font-weight: 700;
+
+/* =============================
+       RIGHT COLUMN (BIGGER TEXT AREA)
+============================= */
+.about-right {
+  width: 100%;
+  max-width: 700px;  /* ⭐ PARAGRAPH WIDTH INCREASED */
+  padding-top: 6px;
 }
 
-/* Right Column */
-.about-right p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #2b2b2b;
-  margin-right: 150px;
-  margin-bottom: 80px;
-  margin-top: -50px;
+/* paragraph bigger width */
+.about-lead,
+.about-body {
+  max-width: 700px; /* ⭐ TEXT CONTENT WIDER */
+  font-size: 1.12rem;
+  line-height: 1.8;
+  text-align: left;
 }
 
-/* CTA */
+/* =============================
+         CTA BOX
+============================= */
 .cta {
-  background-color: #ffffff;
-  color: #060606;
+  background-color:#fff;
+  color:#060606;
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-  margin-top: 200px;
-  margin-bottom: 200px;
-  margin-right: 150px;
-  width: 500px;
-  height: 200px;
-  text-align: center;
-  margin-top: 180px;   
-
-
+  box-shadow: 0 8px 30px rgba(2,6,23,0.35);
+  max-width: 500px;  /* ⭐ CTA BOX ALSO SLIGHTLY WIDER */
+  margin-top:145px !important;
+  height: auto;
 }
 
-.cta .title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #12324b;
-  margin-bottom: 12px;
-}
+/* =============================
+         RESPONSIVE
+============================= */
+@media (max-width: 900px) {
+  .about-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-.cta p {
-  color: #2b2b2b;
-  font-size: 1rem;
-  line-height: 9.6;
-  margin-bottom: -40px;
-}
-
-.cta .btn {
-  width: 100%;
-  padding: 10px 0;
-  border: 2px solid transparent;
-  color: #fff;
-  background-color: navy;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s ease;
-  
-}
-
-/* ---------------------------------
-   RESPONSIVE FIXES (NO DESIGN CHANGE)
------------------------------------*/
-
-@media (max-width: 992px) {
-
-  .about-figure img {
+  .about-left,
+  .about-right {
     width: 100%;
-    height: auto;
-    margin-top: 0;
+    align-items: center;
+  }
+
+  .about-img {
+    max-width: 90%; /* mobile-friendly */
   }
 
   .choose-section,
   .cta {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 90%;
   }
 
-  .about-right p {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .about-subtitle {
-    font-size: 2rem;
-  }
-
-  .about-figure img {
-    width: 100%;
-    height: auto;
-  }
-
-  .cta,
-  .choose-section {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-  }
-
-  .cta p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-
-  .about-right p {
-    margin: 0 0 40px 0;
-  }
-}
-
-@media (max-width: 576px) {
-
-  .choose-section,
-  .cta {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .about-figure img {
-    width: 100%;
-    height: auto;
-  }
-
-  .choose-list li {
-    font-size: 0.9rem;
-  }
-
-  .check {
-    width: 24px;
-    height: 24px;
+  .about-lead,
+  .about-body {
+    text-align: center;
   }
 }
