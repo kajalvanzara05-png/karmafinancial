@@ -84,13 +84,13 @@ const About = () => {
         >
           <p className="about-lead">
             At Karma Financial Solutions, we believe that{" "}
-            <strong>financial freedom isn't just a goal—it's your right.</strong>
+            <strong className="leads">financial freedom isn't just a goal—it's your right.</strong>
             Whether you're just starting your investment journey or planning for long-term wealth,
             we're here to guide you every step of the way.
           </p>
 
           <p className="about-body">
-            With a passion for <strong>transparency, trust, and results, </strong>
+            With a passion for <strong className="leads">transparency, trust, and results, </strong>
             we offer expert-backed services to meet your unique goals.
           </p>
 

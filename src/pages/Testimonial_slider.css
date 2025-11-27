@@ -144,7 +144,8 @@
 }
 
 .testimonial-card {
-  width: 250px;
+  width: 400px;
+  height: 160px;
   padding: 20px;
   border-radius: 15px;
   background: rgb(214, 239, 255); /* yellow background */
@@ -159,7 +160,7 @@
   flex-direction: column;
   justify-content: center; 
   align-items: center;     
-  gap: 12px; 
+  gap:0px; 
   cursor: pointer;
 
 }
