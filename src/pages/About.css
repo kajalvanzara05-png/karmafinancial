@@ -156,3 +156,50 @@
     text-align: center;
   }
 }
+/* =============================
+   MOBILE FIX — IMAGE OVERLAP FIX
+============================= */
+@media (max-width: 480px) {
+
+  /* Image Box / Image Container */
+  .about-img,
+  .choose-section,
+  .cta {
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* जिस box में image है, उसे full width + no overlap */
+  .about-left {
+    width: 100% !important;
+    display: block !important;
+    margin-top: 0 !important;   
+  }
+
+  /* Remove any negative margin or fixed height */
+  .about-img {
+    margin-top: 0 !important;
+    height: auto !important;  
+  }
+
+  .choose-section {
+    height: auto !important;
+  }
+
+  /* Grid → full block */
+  .about-row {
+    display: block !important;
+  }
+
+  .about-right {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* Text wrapping fix */
+  .about-right p,
+  .about-left p {
+    white-space: normal !important;
+  }
+}
