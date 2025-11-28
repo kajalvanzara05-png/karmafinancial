@@ -1,3 +1,10 @@
+/* HEADER */
+.header {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
+
 /* Transparent Header */
 .transparent-header {
   background: rgba(255, 255, 255, 0.65) !important;
@@ -7,40 +14,50 @@
   height: 50px;
   top: 0;
   z-index: 1000;
-}
-.nav-item{
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center content */
 }
 
-/* Navbar center vertically */
+/* Navbar */
 .navbar {
-  height: 50px !important;
-  display: flex !important;
-  align-items: center !important;
-  padding: 0 !important;
+  width: 100%;
+  max-width: 1200px; /* same as your container */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center nav + logo */
+  padding: 0;
+  position: relative;
 }
 
-/* Logo size */
-.navbar-brand img,
-.logo img {
-  height: 40px !important;
+/* Logo */
+.navbar-brand img {
+  height: 40px;
   width: auto;
+  position: relative !important;
+  margin: 0 auto;
+  right: 50%; /* logo ko left ki taraf shift */
+  transform: translateX(-50%); /* logo center relative to left */
 }
 
-/* ------------------------------
-       NAV LINKS (UPDATED)
------------------------------- */
+/* Nav links */
+.navbar-nav {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  left: 50% !important; /* slightly right */
+}
+
 .nav-link {
   position: relative;
-  display: inline-block;
-  color: rgb(214, 239, 255) !important;     /* ⭐ DARK GREEN */
+  color: royalblue;
   font-weight: 500;
   text-decoration: none;
   padding-bottom: 3px;
-  margin-top: 2px;
 }
 
-/* Yellow underline */
 .nav-link::after {
   content: "";
   position: absolute;
@@ -48,7 +65,7 @@
   bottom: 0;
   width: 0%;
   height: 2px;
-  background-color: royalblue;    /* ⭐ YELLOW */
+  background-color: royalblue;
   transition: width 0.3s ease;
 }
 
@@ -56,62 +73,18 @@
   width: 100%;
 }
 
-/* ---------------- MOBILE MENU ---------------- */
-.mobile-collapse {
-  width: 200px;
-  position: fixed;
-  top: 50px;
-  right: -230px;
-  background: #fff;
-  border-left: 1px solid #ddd;
-  transition: right 0.3s ease;
-  height: auto;
-  z-index: 999;
-}
-
-.mobile-collapse.show {
-  right: 0;
-}
-
-.mobile-collapse .nav-link {
-  color: royalblue !important;     /* ⭐ SAME DARK GREEN FOR MOBILE */
-  display: block;
-  padding: 12px 20px;
-  text-align: left;
-  border-bottom: 1px solid #eee;
-}
-
-/* Desktop View */
-@media (min-width: 992px) {
-  .mobile-collapse {
-    display: flex !important;
-    background: transparent;
-    border: none;
-    padding: 0;
-    position: static;
-    height: auto;
-    width: auto;
-    right: 0;
-  }
-
+/* MOBILE */
+@media (max-width: 992px) {
   .navbar-nav {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    left: 0; /* reset for mobile */
   }
-}
-
-/* Mobile adjustments */
-@media (max-width: 480px) {
-  .transparent-header,
-  .navbar {
-    height: 65px !important;
-  }
-
-  .navbar-brand img {
-    height: 45px !important;
-  }
-
-  .navbar-toggler {
-    margin-right: 30px !important;
+  .navbar-brand {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin: 0 auto;
   }
 }

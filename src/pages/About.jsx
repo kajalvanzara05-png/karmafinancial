@@ -29,7 +29,7 @@ const About = () => {
         whileInView="visible"
         viewport={{ once: false, amount: 0.4 }}
       >
-        <div className="about-subtitle">🧾 About Us</div>
+        <div className="about-subtitle"> About Us</div>
         <h2 className="about-heading">Karma Financial Solutions</h2>
         <p className="lead">
           Helping You Grow & Protect Your Wealth With Confidence
