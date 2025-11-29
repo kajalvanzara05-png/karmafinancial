@@ -14,12 +14,13 @@ export default function Header() {
     <header className="header transparent-header">
       <nav className="navbar navbar-expand-lg">
         <div className="d-flex w-100 align-items-center justify-content-between">
-          {/* LOGO LEFT */}
+
+          {/* LOGO */}
           <Link to="/" className="navbar-brand" onClick={() => reloadPage("/")}>
-            <img src={logo} alt="Karma Financial Solutions Logo" style={{ height: "48px" }} />
+            <img src={logo} alt="Logo" className="header-logo" />
           </Link>
 
-          {/* MOBILE TOGGLE BUTTON */}
+          {/* MOBILE TOGGLER */}
           <button
             className="navbar-toggler"
             type="button"
@@ -28,29 +29,33 @@ export default function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* NAV LINKS RIGHT */}
+          {/* NAV LINKS */}
           <div className={`mobile-collapse ${isOpen ? "show" : ""}`}>
-            <ul className="navbar-nav d-flex flex-row gap-4">
+            <ul className="navbar-nav d-flex flex-lg-row flex-column gap-3">
               <li className="nav-item">
                 <Link className="nav-link" to="/" onClick={() => reloadPage("/")}>
                   Home
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/About" onClick={() => reloadPage("/About")}>
                   About
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/Service" onClick={() => reloadPage("/Service")}>
                   Service
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/Contact" onClick={() => reloadPage("/Contact")}>
                   Contact
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link className="nav-link" to="/Blogs" onClick={() => reloadPage("/Blogs")}>
                   Blog
@@ -58,6 +63,7 @@ export default function Header() {
               </li>
             </ul>
           </div>
+
         </div>
       </nav>
     </header>
