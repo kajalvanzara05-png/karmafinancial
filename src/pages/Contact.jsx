@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Contact.css";
+import axios from "axios";   // ⬅ ADD THIS
 
 const Contact = () => {
   useEffect(() => {
@@ -15,6 +16,7 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -38,20 +40,37 @@ const Contact = () => {
     return Object.keys(err).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
 
-    alert("Form Submitted Successfully!");
+    try {
+      const res = await axios.post(`http://127.0.0.1:8000/api/contacts`, {
+  name: formData.name,
+  email: formData.email,
+  phone: formData.phone,
+  message: formData.message,
+});
+
+
+      setSuccess("Message sent successfully!");
+      alert("Form Submitted Successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.log(error);
+      alert("Something went wrong!");
+    }
   };
 
   return (
     <div className="contact-wrapper">
-
-      {/* ⬇ GRID SYSTEM – LEFT FORM + RIGHT BLUE BOX */}
       <div className="contact-grid">
-
-        {/* LEFT SIDE – YOUR ORIGINAL FORM (NO CHANGES) */}
         <div className="contact-card">
           <h2 className="contact-title">Contact Us</h2>
           <p className="contact-subtitle">
@@ -69,7 +88,9 @@ const Contact = () => {
                 className={errors.name ? "is-invalid" : ""}
               />
               <label>Full Name</label>
-              {errors.name && <div className="invalid-feedback d-block">{errors.name}</div>}
+              {errors.name && (
+                <div className="invalid-feedback d-block">{errors.name}</div>
+              )}
             </div>
 
             <div className="form-control">
@@ -82,7 +103,9 @@ const Contact = () => {
                 className={errors.email ? "is-invalid" : ""}
               />
               <label>Email Address</label>
-              {errors.email && <div className="invalid-feedback d-block">{errors.email}</div>}
+              {errors.email && (
+                <div className="invalid-feedback d-block">{errors.email}</div>
+              )}
             </div>
 
             <div className="form-control">
@@ -94,8 +117,10 @@ const Contact = () => {
                 onChange={handleChange}
                 className={errors.phone ? "is-invalid" : ""}
               />
-              <label>Mobile Number</label>
-              {errors.phone && <div className="invalid-feedback d-block">{errors.phone}</div>}
+              <label>phone</label>
+              {errors.phone && (
+                <div className="invalid-feedback d-block">{errors.phone}</div>
+              )}
             </div>
 
             <div className="form-control textarea-control">
@@ -116,20 +141,24 @@ const Contact = () => {
             <button type="submit" className="btn-submit">
               Send Message
             </button>
+
+            {success && <p className="text-success mt-2">{success}</p>}
           </form>
         </div>
 
-        {/* ➡ RIGHT SIDE BLUE BOX (Image Style Section) */}
         <div className="contact-info-box">
           <h3>Ready to Connect?</h3>
           <p>
-            Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
+            Excepteur sint occaecat cupidatat non proident sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
           </p>
 
           <div className="info-card">
             <h4>Visit Our Office</h4>
-            <p>156, 1st Floor, C tower, K10 Atlantis, Near Genda Circle, opp. Honest Restaurant, Vadodara, Gujarat 390007</p>
+            <p>
+              156, 1st Floor, C tower, K10 Atlantis, Near Genda Circle, opp.
+              Honest Restaurant, Vadodara, Gujarat 390007
+            </p>
           </div>
 
           <div className="info-card">
@@ -140,16 +169,18 @@ const Contact = () => {
           <div className="info-card">
             <h4>Call Us Directly</h4>
             <p>+91 81600 72383</p>
-              <p>+91 74050 65241</p>
+            <p>+91 74050 65241</p>
           </div>
 
           <div className="info-card">
             <h4>Business Hours</h4>
-            <p>Mon–Fri: 8AM–7PM<br/>Weekends: By Appointment</p>
+            <p>
+              Mon–Fri: 8AM–7PM
+              <br />
+              Weekends: By Appointment
+            </p>
           </div>
-
         </div>
-
       </div>
     </div>
   );
