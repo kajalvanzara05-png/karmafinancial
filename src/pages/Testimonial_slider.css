@@ -1,235 +1,146 @@
-.testimonial-container {
-  width: 100%;
-  max-width: 1100px;
-  margin: 50px auto;
+.testimonial-section {
   text-align: center;
-  padding: 20px;
-  position: relative;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title glow effect */
+.glow-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: royalblue;
+  animation: glow 3s infinite ease-in-out alternate;
   
 }
-.glow-title{
-  color:royalblue;
 
-}
 
-.testimonial-container h2 {
-  font-size: 2rem;
-  color: #1e3a8a;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-.add-review-btn {
-  margin-bottom: 20px;
-  padding: 8px 14px;
-  background-color: #1e3a8a;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.add-review-btn:hover {
-  background-color: #2563eb;
-}
-
-.testimonial-swiper {
-  width: 100%;
-}
-
+/* Card */
 .testimonial-card {
-  background:rgb(214, 239, 255); /* yellow background */
-  color:darkblue;     /* dark green text */
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 25px;
-  width: 320px;
-  margin: auto;
-  transition: 0.4s ease;
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  border-radius: 18px;
+  padding: 30px 25px 25px 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.07);
   position: relative;
+  transition: all 0.4s ease;
   text-align: center;
 }
 
-.testimonial-card .feedback,
-.testimonial-card .company,
-.testimonial-card .rating {
-  color: darkblue; /* ensure all card text is dark green */
+/* Morph animation */
+.morph {
+  animation: fadeMorph 0.8s ease;
 }
 
-.feedback {
-  font-size: 1rem;
-  margin-bottom: 10px;
+@keyframes fadeMorph {
+  0% {opacity: 0; transform: translateY(20px) scale(0.96);}
+  100% {opacity: 1; transform: translateY(0) scale(1);}
 }
 
-.company {
-  font-style: italic;
+/* Left corner label */
+.testimonial-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0f0483;
+  letter-spacing: 1px;
 }
 
-.rating {
-  margin-top: 10px;
-}
-
+/* Menu (edit/delete) */
 .menu-container {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-.menu-icon {
-  cursor: pointer;
-  font-size: 18px;
-  color: #555;
-}
-
 .menu-dropdown {
   position: absolute;
-  right: 0;
   top: 25px;
+  right: 0;
   background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  z-index: 10;
+  gap: 6px;
 }
 
 .menu-dropdown button {
-  padding: 8px 12px;
-  background: none;
+  padding: 5px 8px;
   border: none;
-  text-align: left;
+  background: none;
   cursor: pointer;
 }
 
-.menu-dropdown button:hover {
-  background: #f1f1f1;
+/* Feedback message */
+.feedback {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #444;
+  margin: 40px 0 15px 0;
 }
 
-.inactive-card {
-  pointer-events: none;
-  filter: blur(3px);
-  opacity: 0.6;
-  transform: scale(0.9);
+/* Horizontal line */
+hr {
+  border: 0;
+  height: 1px;
+  background: #eee;
+  margin: 10px 0;
 }
 
-.message-toast {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #1e3a8a;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  animation: fadeInOut 3s ease-in-out forwards;
-  z-index: 9999;
+/* Client name */
+.client-name {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 8px;
 }
 
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  10% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-}
+/* Rating stars */
 
-.testimonial-card {
-  width: 400px;
-  height: 160px;
-  padding: 20px;
-  border-radius: 15px;
-  background: rgb(214, 239, 255); /* yellow background */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: all 0.5s ease;
-  
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+
+/* Dots */
+.testimonial-dots {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
-  gap:0px; 
-  cursor: pointer;
-
+  gap: 8px;
+  justify-content: center;
 }
 
-/* Center slide - no blur */
-.active-card {
-  transform: scale(1);
-  opacity: 1;
-  filter: none;           /* fully visible */
-  pointer-events: auto;
-  z-index: 5;
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: all 0.3s ease;
 }
 
-/* Left slide blur */
-.left-blur-card {
-  transform: scale(0.9);
-  opacity: 0.6;
-  filter: blur(3px) brightness(0.7); /* blur + dark */
-  pointer-events: none;
-  z-index: 1;
+.active-dot {
+  background: #2a0191;
+  width: 12px;
+  height: 12px;
+  transform: scale(1.2);
 }
 
-/* Right slide blur */
-.right-blur-card {
-  transform: scale(0.9);
-  opacity: 0.6;
-  filter: blur(3px) brightness(0.7); /* blur + dark */
-  pointer-events: none;
-  z-index: 1;
-}
-  
-
-/* Extra slides - more blur */
-.inactive-card {
-  transform: scale(0.8);
-  opacity: 0.4;
-  filter: blur(5px) brightness(0.5);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .testimonial-card {
-    width: 240px;
-    padding: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .testimonial-card {
-    width: 200px;
-    padding: 15px;
-  }
-  .testimonial-swiper {
-    slides-per-view: 2;
-  }
-}
-
+/* Responsive */
 @media (max-width: 480px) {
-  .testimonial-card {
-    width: 160px;
-    padding: 12px;
-  }
-  .testimonial-swiper {
-    slides-per-view: 1;
-  }
-  .menu-container {
-    top: 5px;
-    right: 5px;
-  }
+  .testimonial-card { padding: 25px; }
+  .feedback { font-size: 16px; margin: 35px 0 12px 0; }
+}
+.rating {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.rating svg {
+  width: 20px;
+  height: 20px;
 }

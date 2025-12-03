@@ -1,40 +1,40 @@
-import React from "react";
-
-import { Link } from "react-router-dom";
-import blogData from "../data/blogdata";
-import "../component/BlogCard"; 
-
-
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./blog.css";
 
 function Blog() {
- 
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
-  // Sort blogData by date (latest first)
-  const sortedBlogData = blogData.sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
-  );
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/blogs")
+      .then(res => res.json())
+      .then(data => {
+        setBlogs(data);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (!blogs.length) return <p>No blogs found.</p>;
 
   return (
-    <section className="blog-section  ">
-      <h3 className="blog-title ">Latest Blogs</h3>
-      <div className="blog-grid ">
-        {sortedBlogData.map((blog) => (
-          <div>
-        <Link key={blog.id} to={blog.detailLink} className="blog-card">
- 
-
-            <div className="img-box ">
-              <img src={blog.image} alt={blog.title} />
-              <div className="overlay "></div>
-            </div>
-            <div className="card-body">
-              <p className="blog-date">Published on{blog.date}</p>
-              <h5 className="card-title">{blog.title}</h5>
-              <p className="card-text">{blog.shortDesc}</p>
-            </div>
-            </Link>
+    <section className="blog-section">
+      <h3>Latest Blogs</h3>
+      <div className="blog-grid">
+        {blogs.map(blog => (
+          <div
+            key={blog.slug}
+            className="blog-card"
+            onClick={() => navigate(`/blogs/${blog.slug}`)}
+            style={{ cursor: "pointer" }}
+          >
+            <img src={blog.image} alt={blog.title} />
+            <h4>{blog.title}</h4>
+           
           </div>
-
         ))}
       </div>
     </section>
